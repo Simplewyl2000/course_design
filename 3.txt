@@ -1,0 +1,14 @@
+2.txt  100.0%    *
+2.txt  100.0%    *
+2.txt  100.0%    *
+2.txt  100.0%    *
+9.txt  7.6923076923076925%  
+9.txt  copyRate:7.6923076923076925%  sequence similarity0.46632124352331605%
+9.txt  copyRate:7.6923076923076925%  sequence similarity46.63212435233161%
+2.txt  copyRate:100.0%  sequence similarity 644.5026178010471%  *
+2.txt  copyRate:100.0%  sequence similarity 83.40108401084011%  *
+9.txt  copyRate:7.6923076923076925%  sequence similarity 6.032171581769437%
+1.txt  copyRate:100.0%  sequence similarity 100.0%  *
+1.txt  copyRate:100.0%  sequence similarity 100.0%  *
+1.txt  copyRate:100.0%  sequence similarity 100.0%  *
+1.txt  copyRate:100.0%  sequence similarity 100.0%  *
