@@ -6,14 +6,14 @@ program = ""
 
 
 def get_tokenList(filename, id):
-
-    analysisFile = "token" + str(id) + ".txt"
+    samplePath = "E:\\pycode\\sourceDetect\\sample\\"+ filename
+    analysisFile = "midFile\\" + "token" + str(id) + ".txt"
     if os.path.exists(analysisFile):
         with open(analysisFile) as f:
             program = f.read()
             tokenList = program.split(" ")
     else:
-        command = "E:\\PY2.7.13\\python.exe E:\\pycode\\sourceDetect\\analysis.py" + " " + filename + " " + str(id)
+        command = "E:\\PY2.7.13\\python.exe E:\\pycode\\sourceDetect\\analysis.py" + " " + samplePath + " " + str(id)
         os.system(command)
         with open(analysisFile) as f:
             program = f.read()

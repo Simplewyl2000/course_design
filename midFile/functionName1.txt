@@ -1,0 +1,1 @@
+veri strcmp strcpy link strcat printf Delete strlen calc assert printf priintf printf main printf scanf veri printf printf calc 

@@ -15,22 +15,24 @@ _key = ("auto","break","case","char","const","continue","default",
 
 "signed","static","sizeof","struct","switch","typedef","union",
 
-"unsigned","void","volatile","while")  # cÓïÑÔµÄ32¸ö¹Ø¼ü×Ö
+"unsigned","void","volatile","while")  # cï¿½ï¿½ï¿½Ôµï¿½32ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½
 
-_abnormalChar = '@#$%^&*~' #±êÊ¶·ûÖÐ¿ÉÄÜ³öÏÖµÄ·Ç·¨×Ö·û
+_abnormalChar = '@#$%^&*~' #ï¿½ï¿½Ê¶ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½Ü³ï¿½ï¿½ÖµÄ·Ç·ï¿½ï¿½Ö·ï¿½
 
-_syn = ''  #µ¥´ÊµÄÖÖ±ðÂë
-_p = 0  #ÏÂ±ê
-_value = ''  #´æ·Å´Ê·¨·ÖÎö³öµÄµ¥´Ê
-_content = '' #³ÌÐòÄÚÈÝ
-_mstate = 0 #×Ö·û´®µÄ×´Ì¬
-_cstate = 0 #×Ö·ûµÄ×´Ì¬
-_dstate = 0 #ÕûÊýºÍ¸¡µãÊýµÄ×´Ì¬
-_line = 1 #´úÂëµÄµÚ¼¸ÐÐ
-_mysymbol = [] #·ûºÅ±í
+_syn = ''  #ï¿½ï¿½ï¿½Êµï¿½ï¿½Ö±ï¿½ï¿½ï¿½
+_p = 0  #ï¿½Â±ï¿½
+_value = ''  #ï¿½ï¿½Å´Ê·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½
+_content = '' #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+_mstate = 0 #ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+_cstate = 0 #ï¿½Ö·ï¿½ï¿½ï¿½×´Ì¬
+_dstate = 0 #ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+_line = 1 #ï¿½ï¿½ï¿½ï¿½ÄµÚ¼ï¿½ï¿½ï¿½
+_mysymbol = [] #ï¿½ï¿½ï¿½Å±ï¿½
+_functionName = []
+
 
 def outOfComment():
-    '''È¥³ý´úÂëÖÐµÄ×¢ÊÍ'''
+    '''È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½×¢ï¿½ï¿½'''
     global _content
     state = 0
     index = -1
@@ -59,7 +61,7 @@ def outOfComment():
             if c == '/':
                 endIndex = index + 1
                 comment = _content[startIndex:endIndex]
-                _content = _content.replace(comment,'') #½«×¢ÊÍÌæ»»Îª¿Õ£¬²¢ÇÒ½«ÏÂ±êÒÆ¶¯
+                _content = _content.replace(comment,'') #ï¿½ï¿½×¢ï¿½ï¿½ï¿½æ»»Îªï¿½Õ£ï¿½ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Â±ï¿½ï¿½Æ¶ï¿½
                 index = startIndex - 1
                 state = 0
 
@@ -69,19 +71,19 @@ def outOfComment():
                 state = 2
 
 def getMyProm(filename):
-    '''´ÓÎÄ¼þÖÐ»ñÈ¡´úÂëÆ¬¶Î'''
+    '''ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð»ï¿½È¡ï¿½ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½'''
     global _content
     myPro = open(filename,'r')
 
     for line in myPro:
         if line != '\n':
-            _content = "%s%s" %(_content,line.lstrip()) #Ð§ÂÊ¸ü¸ßµÄ×Ö·û´®Æ´½Ó·½·¨
+            _content = "%s%s" %(_content,line.lstrip()) #Ð§ï¿½Ê¸ï¿½ï¿½ßµï¿½ï¿½Ö·ï¿½ï¿½ï¿½Æ´ï¿½Ó·ï¿½ï¿½ï¿½
         else:
             _content = "%s%s" %(_content,line)
     myPro.close()
 
 def analysis(mystr):
-    '''·ÖÎöÄ¿±ê´úÂë£¬Éú³Étoken'''
+    '''ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½token'''
     global _p,_value,_syn,_mstate,_dstate,_line,_cstate
 
     _value = ''
@@ -91,27 +93,31 @@ def analysis(mystr):
         ch = mystr[_p]
         _p += 1
     if ch in string.letters or ch == '_':    ###############letter(letter|digit)*
+        _funcname = ''
         while ch in string.letters or ch in string.digits or ch == '_' or ch in _abnormalChar:
             _value += ch
+            _funcname = _funcname + ch
             ch = mystr[_p]
             _p += 1
         _p -= 1
 
         for abnormal in _abnormalChar:
             if abnormal in _value:
-                _syn = '@-6' #´íÎó´úÂë£¬±êÊ¶·ûÖÐº¬ÓÐ·Ç·¨×Ö·û
+                _syn = '@-6' #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½Ê¶ï¿½ï¿½ï¿½Ðºï¿½ï¿½Ð·Ç·ï¿½ï¿½Ö·ï¿½
                 break
             else:
                 _syn = 'ID'
 
         for s in _key:
             if cmp(s,_value) == 0:
-                _syn = _value.upper()               #############¹Ø¼ü×Ö
+                _syn = _value.upper()               #############ï¿½Ø¼ï¿½ï¿½ï¿½
                 break
         if _syn == 'ID':
+            if mystr[_p] == '(':
+                _functionName.append(_funcname)
             inSymbolTable(_value)
 
-    elif ch == '\"':                        #############×Ö·û´®
+    elif ch == '\"':                        #############ï¿½Ö·ï¿½ï¿½ï¿½
         while ch in string.letters or ch in '\"% ' :
             _value += ch
             if _mstate == 0:
@@ -125,7 +131,7 @@ def analysis(mystr):
             _p += 1
 
         if _mstate == 1:
-            _syn = '@-2'     #´íÎó´úÂë£¬×Ö·û´®²»·â±Õ
+            _syn = '@-2'     #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             _mstate = 0
 
         elif _mstate == 2:
@@ -158,13 +164,13 @@ def analysis(mystr):
 
         for char in string.letters:
             if char in _value:
-                _syn = '@-7' #´íÎó´úÂë£¬Êý×ÖºÍ×ÖÄ¸»ìºÏ£¬Èç12AB56µÈ
+                _syn = '@-7' #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Ï£ï¿½ï¿½ï¿½12AB56ï¿½ï¿½
                 _dstate = 0
 
 
         if _syn != '@-7':
             if _dstate == 5:
-                _syn = '@-3' #´íÎó´úÂë£¬Êý×ÖÒÔ0¿ªÍ·
+                _syn = '@-3' #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½Í·
                 _dstate = 0
             else:
                 _dstate = 0
@@ -172,13 +178,13 @@ def analysis(mystr):
                     _syn = 'DIGIT'               ##################digit digit*
                 else:
                     if _value.count('.') == 1:
-                        _syn = 'FRACTION'           ################## ¸¡µãÊý
+                        _syn = 'FRACTION'           ################## ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     else:
-                        _syn = '@-5' #´íÎó´úÂë£¬¸¡µãÊýÖÐ°üº¬¶à¸öµã£¬Èç1.2.3
+                        _syn = '@-5' #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã£¬ï¿½ï¿½1.2.3
         _p -= 1
 
 
-    elif ch == '\'':                    ################## ×Ö·û
+    elif ch == '\'':                    ################## ï¿½Ö·ï¿½
         while ch in string.letters or ch in '@#$%&*\\\'\"':
             _value += ch
             if _cstate == 0:
@@ -206,7 +212,7 @@ def analysis(mystr):
             _syn = 'CHARACTER'
             _cstate = 0
         else:
-            _syn = '@-4'   #´íÎó´úÂë£¬×Ö·û²»·â±Õ
+            _syn = '@-4'   #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             _cstate = 0
 
     elif ch == '<':
@@ -341,7 +347,7 @@ def analysis(mystr):
         _syn = '@-1'
 
 def inSymbolTable(token):
-    '''½«¹Ø¼ü×ÖºÍ±êÊ¶·û´æ½ø·ûºÅ±í'''
+    '''ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ÖºÍ±ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½'''
     global _mysymbol
     if token not in _mysymbol:
         _mysymbol.append(token)
@@ -350,36 +356,43 @@ if __name__ == '__main__':
     filenameFromCMD = sys.argv[1]
     getMyProm(filenameFromCMD)
     outOfComment()
-    filepath1 = 'E:\\pycode\\sourceDetect\\symbol_table' + str(sys.argv[2]) + ".txt"
-    filepath2 = 'E:\\pycode\\sourceDetect\\token' + str(sys.argv[2]) + ".txt"
+    filepath1 = 'E:\\pycode\\sourceDetect\\midFile\\symbol_table' + str(sys.argv[2]) + ".txt"
+    filepath2 = 'E:\\pycode\\sourceDetect\\midFile\\token' + str(sys.argv[2]) + ".txt"
+    filepath3 = 'E:\\pycode\\sourceDetect\\midFile\\functionName' + str(sys.argv[2]) + ".txt"
 
 
     symbolTableFile = open(filepath1,'w')
     tokenFile = open(filepath2,'w')
+    funcnameFile = open(filepath3, 'w')
     while _p != len(_content):
         analysis(_content)
         if _syn == '@-1':
-            _line += 1 #¼ÇÂ¼³ÌÐòµÄÐÐÊý
+            _line += 1 #ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         elif _syn == '@-2':
-            print '×Ö·û´® ' + _value + ' ²»·â±Õ! Error in line ' + str(_line)
+            print 'ï¿½Ö·ï¿½ï¿½ï¿½ ' + _value + ' ï¿½ï¿½ï¿½ï¿½ï¿½! Error in line ' + str(_line)
         elif _syn == '@-3':
-            print 'Êý×Ö ' + _value + ' ´íÎó£¬²»ÄÜÒÔ0¿ªÍ·! Error in line ' + str(_line)
+            print 'ï¿½ï¿½ï¿½ï¿½ ' + _value + ' ï¿½ï¿½ï¿½ó£¬²ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½Í·! Error in line ' + str(_line)
         elif _syn == '@-4':
-            print '×Ö·û ' + _value + ' ²»·â±Õ! Error in line ' + str(_line)
+            print 'ï¿½Ö·ï¿½ ' + _value + ' ï¿½ï¿½ï¿½ï¿½ï¿½! Error in line ' + str(_line)
         elif _syn == '@-5':
-            print 'Êý×Ö ' + _value + ' ²»ºÏ·¨! Error in line ' + str(_line)
+            print 'ï¿½ï¿½ï¿½ï¿½ ' + _value + ' ï¿½ï¿½ï¿½Ï·ï¿½! Error in line ' + str(_line)
         elif _syn == '@-6':
-            print '±êÊ¶·û' + _value + ' ²»ÄÜ°üº¬·Ç·¨×Ö·û!Error in line ' + str(_line)
+            print 'ï¿½ï¿½Ê¶ï¿½ï¿½' + _value + ' ï¿½ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ö·ï¿½!Error in line ' + str(_line)
         elif _syn == '@-7':
-            print 'Êý×Ö ' + _value + ' ²»ºÏ·¨,°üº¬×ÖÄ¸! Error in line ' + str(_line)
-        else: #Èô³ÌÐòÖÐÎÞ´Ê·¨´íÎóµÄÇé¿ö
+            print 'ï¿½ï¿½ï¿½ï¿½ ' + _value + ' ï¿½ï¿½ï¿½Ï·ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸! Error in line ' + str(_line)
+        else: #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ´Ê·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             #print (_syn,_value)
             tokenFile.write(str(_syn)+ " ")
 
     tokenFile.close()
-    symbolTableFile.write('Èë¿ÚµØÖ·\t±äÁ¿Ãû\n')
+    symbolTableFile.write('ï¿½ï¿½Úµï¿½Ö·\tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n')
     i = 0
     for symbolItem in _mysymbol:
         symbolTableFile.write(str(i)+'\t\t\t'+symbolItem+'\n')
         i += 1
     symbolTableFile.close()
+
+    for func in _functionName:
+        funcnameFile.write(func + " ")
+
+    funcnameFile.close()

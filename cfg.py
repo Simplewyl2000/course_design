@@ -1,8 +1,12 @@
 import readAnalysis
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
 
 
 functionList = []
 functionBodyList = []
+colors = ["blue","red","green","black","pink","purple","orange","yellow"]
 
 
 class Function:
@@ -74,8 +78,14 @@ class Function:
          self.__containFunctions.append(fun)
 
 
-def find_sub_list(sl, l, preresult, isBody):
+def find_sub_list(sl, l, preresult, isBody,id):
     global functionList
+    functionNameInputFile = open("midFile\\functionName" + str(id) + ".txt")
+    functionNameInput = functionNameInputFile.read()
+    functionNameList = functionNameInput.split(" ")
+    functionNameInputFile.close()
+
+
     id = 0
     results=preresult
     sll=len(sl)
@@ -88,8 +98,8 @@ def find_sub_list(sl, l, preresult, isBody):
                 for i in functionList:
                     if i.get_whereFunctionStarts() == ind+1:
                         functiontem.set_functionID(i.get_functionID())
-                functionName = "FUNC" + str(functiontem.get_functionID())
-                functiontem.set_functionName(functionName)
+                        functiontem.set_functionName(functionNameList[i.get_functionID() - 1])
+
                 results.append(functiontem)
     else:
         for ind in (i for i, e in enumerate(l) if e==sl[0]):
@@ -97,8 +107,7 @@ def find_sub_list(sl, l, preresult, isBody):
                 id = id + 1
                 functiontem = Function()
                 functiontem.set_functionID(id)
-                functionName = "FUNC" + str(functiontem.get_functionID())
-                functiontem.set_functionName(functionName)
+                functiontem.set_functionName(functionNameList[id - 1])
                 functiontem.set_isFunctionBody(isBody)
                 functiontem.set_whereFunctionStarts(ind)
                 results.append(functiontem)
@@ -110,29 +119,73 @@ def find_functions(tokenList):
     global functionList
     global functionBodyList
 
-    functionList =find_sub_list(["ID", "("], tokenList, functionList, False)
-    functionBodyList = find_sub_list(["INT", "ID", "("], tokenList, functionBodyList, True)
-    functionBodyList = find_sub_list(["CHAR", "ID", "("], tokenList, functionBodyList, True)
-    functionBodyList = find_sub_list(["VOID", "ID", "("], tokenList, functionBodyList, True)
+    functionList =find_sub_list(["ID", "("], tokenList, functionList, False, 1)
+    functionBodyList = find_sub_list(["INT", "ID", "("], tokenList, functionBodyList, True, 1)
+    functionBodyList = find_sub_list(["CHAR", "ID", "("], tokenList, functionBodyList, True, 1)
+    functionBodyList = find_sub_list(["VOID", "ID", "("], tokenList, functionBodyList, True, 1)
     for i in functionBodyList:
         i.find_functionEnd(tokenList, i.get_whereFunctionStarts())
 
 
-if __name__ == "__main__":
-    tokenList = readAnalysis.get_tokenList("E:\pycode\sourceDetect\sample\\1.txt", 1)
+def martrix_build(file, id):
+    tokenList = readAnalysis.get_tokenList(file, id)
     find_functions(tokenList)
-    print(tokenList)
-    for i in functionList:
-        print(i.get_functionName() + " " + str(i.get_whereFunctionStarts()))
-    print("\n")
-    for i in functionBodyList:
-        print(i.get_functionName() + " " + str(i.get_whereFunctionStarts())+ " " + str(i.get_whereFunctionEnds()))
+    functionSet, functionDic = function_set(functionList)
+    a = np.zeros([len(functionBodyList), len(functionSet)], dtype=np.int)
+    x = -1
+    edges = []
+    nodes = []
+    for i in functionDic:
+        nodes.append(functionDic[i])
+
 
     for i in functionBodyList:
+        x = x + 1
         for j in functionList:
             if i.get_whereFunctionStarts() < j.get_whereFunctionStarts() < i.get_whereFunctionEnds():
-                if i.get_whereFunctionStarts()+1 != j.get_whereFunctionStarts():
-                    i.childFunction = i.childFunction + j.get_functionName()
+                if i.get_whereFunctionStarts() + 1 != j.get_whereFunctionStarts():
+                    a[x, functionDic[j.get_functionName()]] = a[x, functionDic[j.get_functionName()]] + 1
+                    edges.append((functionDic[i.get_functionName()], functionDic[j.get_functionName()]))
 
-    for i in functionBodyList:
-            print(i.get_functionName() + " " + str(i.get_whereFunctionStarts()) + " " + str(i.get_whereFunctionEnds()) + " contains " + i.childFunction)
+    return a, edges, nodes
+
+
+def draw_cfg(edges, nodes):
+    G = nx.DiGraph()
+    G.add_nodes_from(nodes)
+    G.add_edges_from(edges)
+    nx.draw(G)
+    plt.savefig("youxiangtu.png")
+    plt.show()
+
+
+def function_set(funclist):
+    functiondic = {}
+    functionset = []
+    funcNewId = 0
+    for i in funclist:
+        functionset.append(i.get_functionName())
+    functionset = set(functionset)
+    functionset = list(functionset)
+    for i in functionset:
+        functiondic[i] = funcNewId
+        funcNewId = funcNewId + 1
+
+    return functionset, functiondic
+
+
+if __name__ == "__main__":
+    tokenList = readAnalysis.get_tokenList("1.txt", 1)
+    find_functions(tokenList)
+    functionSet, functionDic = function_set(functionList)
+    print(functionDic)
+    print(functionSet)
+
+
+
+
+
+
+
+
+
