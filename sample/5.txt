@@ -1,0 +1,116 @@
+#define NUM_OF_TEST 8000
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+int main()
+{
+	FILE *fp;
+	fp = fopen("1.1.dat", "w");
+	unsigned short a;
+	srand((unsigned int)time(NULL));
+	unsigned short b;
+	unsigned short c[0xffff];
+	int i;
+	for(a=0x0;a!=NUM_OF_TEST;a++)
+	{
+		b = rand()%0xffff;
+		for(i = 0; i< a; i++)
+		{
+			if(c[i]==b)
+			continue;
+		}
+		fprintf(fp, "%x ", b);
+		c[a] = b;
+	}
+	printf("���ľ��Ѿ����ɲ���������1.1.dat�С�");
+	fclose(fp);
+}
+int StrToInt2(const char *str)  
+{  
+  strToIntOK = false;  
+  if(str == NULL) //��ָ��  
+    return 0;  
+    
+  if(str[0] == '0' && str[1] != '\0') //��'0'��ʼ������"0" ������ʵ���Ժ���  
+    return 0;  
+    
+  unsigned i = 0;  
+  bool minus = false;  //�������  
+  if(str[i] == '-' || str[i] == '+') //�ж��ǲ����������ſ�ʼ  
+  {  
+    minus = (str[i] == '-')? true: false;  
+    i++;  
+  }  
+    
+  long long result = 0; //ת���Ľ��  
+  while(str[i] != '\0')  
+  {  
+    char c = str[i++];  
+    if(c >= '0' && c <='9')  
+    {  
+      result = result * 10 + (c - '0');  
+      if(minus) //����� 
+      { 
+        if(result - 1 > numeric_limits<int>::max())  
+          return 0;  
+      } 
+      else //����� 
+      { 
+        if(result > numeric_limits<int>::max()) 
+          return 0;  
+      } 
+    }  
+    else  
+    {  
+      return 0;  
+    }  
+  }  
+  strToIntOK = true;  
+  //������� ��ǿ��ת��һ��  
+  return minus? (int)(-result):(int)result;  
+}  
+
+int StrToInt3(const char *str)  
+{  
+  strToIntOK = false;  
+  if(str == NULL) //��ָ��  
+    return 0;  
+    
+  if(str[0] == '0' && str[1] != '\0') //��'0'��ʼ������"0" ������ʵ���Ժ���  
+    return 0;  
+    
+  unsigned i = 0;  
+  bool minus = false;  //�������  
+  if(str[i] == '-' || str[i] == '+') //�ж��ǲ����������ſ�ʼ  
+  {  
+    minus = (str[i] == '-')? true: false;  
+    i++;  
+  }  
+    
+  long long result = 0; //ת���Ľ��  
+  while(str[i] != '\0')  
+  {  
+    char c = str[i++];  
+    if(c >= '0' && c <='9')  
+    {  
+      result = result * 10 + (c - '0');  
+      if(minus) //����� 
+      { 
+        if(result - 1 > numeric_limits<int>::max())  
+          return 0;  
+      } 
+      else //����� 
+      { 
+        if(result > numeric_limits<int>::max()) 
+          return 0;  
+      } 
+    }  
+    else  
+    {  
+      return 0;  
+    }  
+  }  
+  strToIntOK = true;  
+  //������� ��ǿ��ת��һ��  
+  return minus? (int)(-result):(int)result;  
+}

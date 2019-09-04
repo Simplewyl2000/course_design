@@ -3,8 +3,6 @@ import os
 program = ""
 
 
-
-
 def get_tokenList(filename, id):
     samplePath = "E:\\pycode\\sourceDetect\\sample\\"+ filename
     analysisFile = "midFile\\" + "token" + str(id) + ".txt"

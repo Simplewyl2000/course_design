@@ -84,9 +84,9 @@ def find_sub_list(sl, l, preresult, isBody,id):
     functionNameInput = functionNameInputFile.read()
     functionNameList = functionNameInput.split(" ")
     functionNameInputFile.close()
+    functionnnname =""
 
-
-    id = 0
+    idForFunction = 0
     results=preresult
     sll=len(sl)
     if isBody:
@@ -104,10 +104,14 @@ def find_sub_list(sl, l, preresult, isBody,id):
     else:
         for ind in (i for i, e in enumerate(l) if e==sl[0]):
             if l[ind:ind+sll] == sl:
-                id = id + 1
+
+                idForFunction = idForFunction + 1
+                if idForFunction-1 == len(functionNameList):
+                    return results
                 functiontem = Function()
-                functiontem.set_functionID(id)
-                functiontem.set_functionName(functionNameList[id - 1])
+                functiontem.set_functionID(idForFunction)
+                functiontem.set_functionName(functionNameList[idForFunction - 1])
+
                 functiontem.set_isFunctionBody(isBody)
                 functiontem.set_whereFunctionStarts(ind)
                 results.append(functiontem)
@@ -115,21 +119,28 @@ def find_sub_list(sl, l, preresult, isBody,id):
     return results
 
 
-def find_functions(tokenList):
+def find_functions(tokenList,id):
     global functionList
     global functionBodyList
 
-    functionList =find_sub_list(["ID", "("], tokenList, functionList, False, 1)
-    functionBodyList = find_sub_list(["INT", "ID", "("], tokenList, functionBodyList, True, 1)
-    functionBodyList = find_sub_list(["CHAR", "ID", "("], tokenList, functionBodyList, True, 1)
-    functionBodyList = find_sub_list(["VOID", "ID", "("], tokenList, functionBodyList, True, 1)
+    functionList = find_sub_list(["ID", "("], tokenList, functionList, False, id)
+    functionBodyList = find_sub_list(["INT", "ID", "("], tokenList, functionBodyList, True, id)
+    functionBodyList = find_sub_list(["CHAR", "ID", "("], tokenList, functionBodyList, True, id)
+    functionBodyList = find_sub_list(["VOID", "ID", "("], tokenList, functionBodyList, True, id)
     for i in functionBodyList:
         i.find_functionEnd(tokenList, i.get_whereFunctionStarts())
 
 
 def martrix_build(file, id):
+    global functionBodyList
+    global functionList
+    del functionList
+    functionList = []
+    del functionBodyList
+    functionBodyList = []
+
     tokenList = readAnalysis.get_tokenList(file, id)
-    find_functions(tokenList)
+    find_functions(tokenList,id)
     functionSet, functionDic = function_set(functionList)
     a = np.zeros([len(functionBodyList), len(functionSet)], dtype=np.int)
     x = -1
@@ -150,12 +161,12 @@ def martrix_build(file, id):
     return a, edges, nodes
 
 
-def draw_cfg(edges, nodes):
+def draw_cfg(edges, nodes, filename):
     G = nx.DiGraph()
     G.add_nodes_from(nodes)
     G.add_edges_from(edges)
     nx.draw(G)
-    plt.savefig("youxiangtu.png")
+    plt.savefig(filename+".png")
     plt.show()
 
 
@@ -175,8 +186,8 @@ def function_set(funclist):
 
 
 if __name__ == "__main__":
-    tokenList = readAnalysis.get_tokenList("1.txt", 1)
-    find_functions(tokenList)
+    tokenList = readAnalysis.get_tokenList("5.txt", 10)
+    find_functions(tokenList, 10)
     functionSet, functionDic = function_set(functionList)
     print(functionDic)
     print(functionSet)

@@ -1,0 +1,1 @@
+main time srand random printf printf scanf printf printf printf StrToInt3 max max 

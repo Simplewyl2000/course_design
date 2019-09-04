@@ -29,6 +29,7 @@ _dstate = 0 #�����͸�������״̬
 _line = 1 #����ĵڼ���
 _mysymbol = [] #���ű�
 _functionName = []
+_flag = 1
 
 
 def outOfComment():
@@ -84,14 +85,28 @@ def getMyProm(filename):
 
 def analysis(mystr):
     '''����Ŀ����룬����token'''
-    global _p,_value,_syn,_mstate,_dstate,_line,_cstate
+    global _p,_value,_syn,_mstate,_dstate,_line,_cstate,_flag
+
+    _flag = 1
+
+
+    if _p == len(mystr):
+        _flag = 0
+        return
 
     _value = ''
     ch = mystr[_p]
     _p += 1
+
     while ch == ' ':
+        if _p == len(mystr):
+            _flag = 0
+            return
         ch = mystr[_p]
         _p += 1
+        if _p == len(mystr):
+            _flag = 0
+
     if ch in string.letters or ch == '_':    ###############letter(letter|digit)*
         _funcname = ''
         while ch in string.letters or ch in string.digits or ch == '_' or ch in _abnormalChar:
@@ -360,11 +375,10 @@ if __name__ == '__main__':
     filepath2 = 'E:\\pycode\\sourceDetect\\midFile\\token' + str(sys.argv[2]) + ".txt"
     filepath3 = 'E:\\pycode\\sourceDetect\\midFile\\functionName' + str(sys.argv[2]) + ".txt"
 
-
     symbolTableFile = open(filepath1,'w')
     tokenFile = open(filepath2,'w')
     funcnameFile = open(filepath3, 'w')
-    while _p != len(_content):
+    while _p != len(_content) and _flag:
         analysis(_content)
         if _syn == '@-1':
             _line += 1 #��¼���������
