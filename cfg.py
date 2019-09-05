@@ -11,6 +11,7 @@ colors = ["blue","red","green","black","pink","purple","orange","yellow"]
 
 class Function:
 
+    __functionLine = 0
     __funtionName = ""
     __functionID = 0
     __isFunctionBody = False
@@ -59,6 +60,10 @@ class Function:
     def get_childFunction(self):
         return self.__containFunctions
 
+    def get_functionLine(self):
+        return self.__functionLine
+
+
     def set_functionName(self, a):
         self.__funtionName = a
 
@@ -74,6 +79,11 @@ class Function:
     def set_whereFunctionEnds(self, a):
          self.__whereFunctionEnds = a
 
+    def set_functionLine(self,a):
+        self.__functionLine = a
+
+
+
     def append_childFunction(self,fun):
          self.__containFunctions.append(fun)
 
@@ -81,8 +91,11 @@ class Function:
 def find_sub_list(sl, l, preresult, isBody,id):
     global functionList
     functionNameInputFile = open("midFile\\functionName" + str(id) + ".txt")
+    functionLineInputFile = open("midFile\\functionLine" + str(id) + ".txt")
     functionNameInput = functionNameInputFile.read()
+    functionLineInput = functionLineInputFile.read()
     functionNameList = functionNameInput.split(" ")
+    functionLineList = functionLineInput.split(" ")
     functionNameInputFile.close()
     functionnnname =""
 
@@ -99,6 +112,7 @@ def find_sub_list(sl, l, preresult, isBody,id):
                     if i.get_whereFunctionStarts() == ind+1:
                         functiontem.set_functionID(i.get_functionID())
                         functiontem.set_functionName(functionNameList[i.get_functionID() - 1])
+                        functiontem.set_functionLine(int(functionLineList[i.get_functionID() - 1]))
 
                 results.append(functiontem)
     else:
@@ -111,11 +125,10 @@ def find_sub_list(sl, l, preresult, isBody,id):
                 functiontem = Function()
                 functiontem.set_functionID(idForFunction)
                 functiontem.set_functionName(functionNameList[idForFunction - 1])
-
+                functiontem.set_functionLine(int(functionLineList[idForFunction-1]))
                 functiontem.set_isFunctionBody(isBody)
                 functiontem.set_whereFunctionStarts(ind)
                 results.append(functiontem)
-
     return results
 
 
@@ -129,6 +142,8 @@ def find_functions(tokenList,id):
     functionBodyList = find_sub_list(["VOID", "ID", "("], tokenList, functionBodyList, True, id)
     for i in functionBodyList:
         i.find_functionEnd(tokenList, i.get_whereFunctionStarts())
+
+    return functionList, functionBodyList
 
 
 def martrix_build(file, id):

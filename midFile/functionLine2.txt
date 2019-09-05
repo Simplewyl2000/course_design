@@ -1,0 +1,1 @@
+veri 2 strcmp 6 strcpy 7 link 10 strcat 12 printf 13 Delete 15 strlen 17 calc 55 assert 63 printf 77 priintf 83 printf 89 main 92 printf 98 scanf 99 veri 100 printf 103 printf 107 calc 108 

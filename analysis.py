@@ -129,7 +129,7 @@ def analysis(mystr):
                 break
         if _syn == 'ID':
             if mystr[_p] == '(':
-                _functionName.append(_funcname)
+                _functionName.append((_funcname,_line))
             inSymbolTable(_value)
 
     elif ch == '\"':                        #############�ַ���
@@ -374,10 +374,12 @@ if __name__ == '__main__':
     filepath1 = 'E:\\pycode\\sourceDetect\\midFile\\symbol_table' + str(sys.argv[2]) + ".txt"
     filepath2 = 'E:\\pycode\\sourceDetect\\midFile\\token' + str(sys.argv[2]) + ".txt"
     filepath3 = 'E:\\pycode\\sourceDetect\\midFile\\functionName' + str(sys.argv[2]) + ".txt"
+    filepath4 = 'E:\\pycode\\sourceDetect\\midFile\\functionLine' + str(sys.argv[2]) + ".txt"
 
     symbolTableFile = open(filepath1,'w')
     tokenFile = open(filepath2,'w')
     funcnameFile = open(filepath3, 'w')
+    functionLine = open(filepath4,'w')
     while _p != len(_content) and _flag:
         analysis(_content)
         if _syn == '@-1':
@@ -407,6 +409,11 @@ if __name__ == '__main__':
     symbolTableFile.close()
 
     for func in _functionName:
-        funcnameFile.write(func + " ")
+        funcnameFile.write(func[0] + " ")
+
+    for func in _functionName:
+        functionLine.write(str(func[1])+ " ")
+
 
     funcnameFile.close()
+    functionLine.close()
