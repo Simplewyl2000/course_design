@@ -1,1 +1,1 @@
-main 9 time 13 srand 15 random 16 printf 17 printf 20 scanf 21 printf 41 printf 42 printf 45 StrToInt3 47 max 70 max 75 
+9 13 15 16 17 20 21 41 42 45 47 70 75 

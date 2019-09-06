@@ -184,11 +184,12 @@ def martrix_build(file, id):
 
 
 def draw_cfg(edges, nodes, filename):
+    filepath = "result//cfg//" + filename + ".png"
     G = nx.DiGraph()
     G.add_nodes_from(nodes)
     G.add_edges_from(edges)
-    nx.draw(G)
-    plt.savefig(filename+".png")
+    nx.draw_shell(G)
+    plt.savefig(filepath)
     plt.show()
 
 
