@@ -1,14 +1,12 @@
-import os
-
+import analysis
 program = ""
 
 
 def get_tokenList(filename, id):
-    samplePath = "E:\\pycode\\sourceDetect\\sample\\"+ filename
+    samplePath = "sample\\" + filename
     analysisFile = "midFile\\" + "token" + str(id) + ".txt"
 
-    command = "E:\\PY2.7.13\\python.exe E:\\pycode\\sourceDetect\\analysis.py" + " " + samplePath + " " + str(id)
-    os.system(command)
+    analysis.processProgram(samplePath,id)
     with open(analysisFile) as f:
          program = f.read()
          tokenList = program.split(" ")

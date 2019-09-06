@@ -5,31 +5,31 @@
 #include<stdlib.h>
 int main()
 {
-int stime,a,z,t,i,c,m,g,s,j,k,l[4]; /*j:Êı×ÖÕıÈ·µÄÎ»Êı k:Î»ÖÃÕıÈ·µÄÎ»Êı*/
+int stime,a,z,t,i,c,m,g,s,j,k,l[4]; /*j:æ•°å­—æ­£ç¡®çš„ä½æ•° k:ä½ç½®æ­£ç¡®çš„ä½æ•°*/
 long ltime;
-ltime=time(NULL); /*l:Êı×ÖÏàÍ¬Ê±£¬ÈËËù²ÂÖĞÊı×ÖµÄÕıÈ·Î»ÖÃ*/
+ltime=time(NULL); /*l:æ•°å­—ç›¸åŒæ—¶ï¼Œäººæ‰€çŒœä¸­æ•°å­—çš„æ­£ç¡®ä½ç½®*/
 stime=(unsigned int)ltime/2;
 srand(stime);
-z=random(9999); /*¼ÆËã»úÏëÒ»¸öËæ»úÊı*/
+z=random(9999); /*è®¡ç®—æœºæƒ³ä¸€ä¸ªéšæœºæ•°*/
 printf("I have a number with 4 digits in mind,please guess. ");
-for(c=1;;c++) /*c: ²ÂÊı´ÎÊı¼ÆÊıÆ÷*/
+for(c=1;;c++) /*c: çŒœæ•°æ¬¡æ•°è®¡æ•°å™¨*/
 {
 printf("Enter a number with 4 digits:");
-scanf("%d %d",&g); /*ÇëÈË²Â*/ 
+scanf("%d %d",&g); /*è¯·äººçŒœ*/ 
 a=z;j=0;k=0;l[0]=l[1]=l[2]=l[3]=0;
-for(i=1;i<5;i++) /*i:Ô­ÊıÖĞµÄµÚiÎ»Êı¡£¸öÎ»ÎªµÚÒ»Î»£¬Ç§Î»ÎªµÚ4Î»*/
+for(i=1;i<5;i++) /*i:åŸæ•°ä¸­çš„ç¬¬iä½æ•°ã€‚ä¸ªä½ä¸ºç¬¬ä¸€ä½ï¼Œåƒä½ä¸ºç¬¬4ä½*/
 {
 s=g;m=1;
-for(t=1;t<5;t++) /*ÈËËù²ÂÏëµÄÊı*/
+for(t=1;t<5;t++) /*äººæ‰€çŒœæƒ³çš„æ•°*/
 {
-if(a%10==s%10) /*ÈôµÚiÎ»ÓëÈË²ÂµÄµÚtÎ»ÏàÍ¬*/
+if(a%10==s%10) /*è‹¥ç¬¬iä½ä¸äººçŒœçš„ç¬¬tä½ç›¸åŒ*/
 {
 if(m&&t!=l[0]&&t!=l[1]&&t!=l[2]&&t!=l[3])
 {
-j++;m=0;l[j-1]=t; /*Èô¸ÃÎ»ÖÃÉÏµÄÊı×ÖÉĞÎ´ÓëÆäËüÊı×Ö¡°ÏàÍ¬¡±*/
-} /*¼ÇÂ¼ÏàÍ¬Êı×ÖÊ±£¬¸ÃÊı×ÖÔÚËù²ÂÊı×ÖÖĞµÄÎ»ÖÃ*/
+j++;m=0;l[j-1]=t; /*è‹¥è¯¥ä½ç½®ä¸Šçš„æ•°å­—å°šæœªä¸å…¶å®ƒæ•°å­—â€œç›¸åŒâ€*/
+} /*è®°å½•ç›¸åŒæ•°å­—æ—¶ï¼Œè¯¥æ•°å­—åœ¨æ‰€çŒœæ•°å­—ä¸­çš„ä½ç½®*/
 
-if(i==t) k++; /*ÈôÎ»ÖÃÒ²ÏàÍ¬£¬Ôò¼ÆÊıÆ÷k¼Ó1*/
+if(i==t) k++; /*è‹¥ä½ç½®ä¹Ÿç›¸åŒï¼Œåˆ™è®¡æ•°å™¨kåŠ 1*/
 }
 s/=10;
 }
@@ -37,40 +37,40 @@ a/=10;
 }
 printf("You hane correctly guessed %d digits, ",j);
 printf("and correctly guessed %d digits in exact position. ",k);
-if(k==4) break; /*ÈôÎ»ÖÃÈ«²¿ÕıÈ·£¬ÔòÈË²Â¶ÔÁË£¬ÍË³ö*/
+if(k==4) break; /*è‹¥ä½ç½®å…¨éƒ¨æ­£ç¡®ï¼Œåˆ™äººçŒœå¯¹äº†ï¼Œé€€å‡º*/
 }
 printf("Now you have correctly guessed the whole number after %d times. " , c , k);
 } 
 int StrToInt3(const char *str)  
 {  
   strToIntOK = false;  
-  if(str == NULL) //¿ÕÖ¸Õë  
+  if(str == NULL) //ç©ºæŒ‡é’ˆ  
     return 0;  
     
-  if(str[0] == '0' && str[1] != '\0') //ÒÔ'0'¿ªÊ¼µ«²»ÊÇ"0" ÕâÌõÆäÊµ¿ÉÒÔºöÂÔ  
+  if(str[0] == '0' && str[1] != '\0') //ä»¥'0'å¼€å§‹ä½†ä¸æ˜¯"0" è¿™æ¡å…¶å®å¯ä»¥å¿½ç•¥  
     return 0;  
     
   unsigned i = 0;  
-  bool minus = false;  //¸ºÊı±ê¼Ç  
-  if(str[i] == '-' || str[i] == '+') //ÅĞ¶ÏÊÇ²»ÊÇÒÔÕı¸ººÅ¿ªÊ¼  
+  bool minus = false;  //è´Ÿæ•°æ ‡è®°  
+  if(str[i] == '-' || str[i] == '+') //åˆ¤æ–­æ˜¯ä¸æ˜¯ä»¥æ­£è´Ÿå·å¼€å§‹  
   {  
     minus = (str[i] == '-')? true: false;  
     i++;  
   }  
     
-  long long result = 0; //×ª»»µÄ½á¹û  
+  long long result = 0; //è½¬æ¢çš„ç»“æœ  
   while(str[i] != '\0')  
   {  
     char c = str[i++];  
     if(c >= '0' && c <='9')  
     {  
       result = result * 10 + (c - '0');  
-      if(minus) //¸ºÒç³ö 
+      if(minus) //è´Ÿæº¢å‡º 
       { 
         if(result - 1 > numeric_limits<int>::max())  
           return 0;  
       } 
-      else //ÕıÒç³ö 
+      else //æ­£æº¢å‡º 
       { 
         if(result > numeric_limits<int>::max()) 
           return 0;  
@@ -82,6 +82,6 @@ int StrToInt3(const char *str)
     }  
   }  
   strToIntOK = true;  
-  //½á¹û·µ»Ø ĞèÇ¿ÖÆ×ª»»Ò»ÏÂ  
+  //ç»“æœè¿”å› éœ€å¼ºåˆ¶è½¬æ¢ä¸€ä¸‹  
   return minus? (int)(-result):(int)result;  
 } 

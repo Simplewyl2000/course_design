@@ -43,7 +43,7 @@ def compareMatrix(file1, file2, id1, id2):
 
 print(compareMatrix("1.txt", "4.txt", 2, 20))
 
-edge1, nodes1 =  cfg.martrix_build("1.txt", 2 )[1:]
+edge1, nodes1 = cfg.martrix_build("1.txt", 2 )[1:]
 edge2, nodes2 = cfg.martrix_build("4.txt",20)[1:]
 cfg.draw_cfg(edge1, nodes1, "1.txt")
 cfg.draw_cfg(edge2, nodes2, "4.txt")

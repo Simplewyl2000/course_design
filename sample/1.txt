@@ -11,9 +11,9 @@ void link(char *s2,char *s3)
 { 
  strcat(s3,s2); 
  printf("连接s2后的s3为:%s\n",s3); 
- } 
- 
- void Delete(char str[]) {  
+ }
+
+ void Delete(char str[]) {
  int i,j,Length,StartBlank=0,EndBlank=0,MiddleBlank=0;
  Length=strlen(str);  
  for(i=0; i<Length; i++)   

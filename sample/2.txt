@@ -10,14 +10,14 @@ int veri(char *password)
 void link(char *s2,char *s3) 
 { 
  strcat(s3,s2); 
- printf("Á¬½Ós2ºóµÄs3Îª:%s\n",s3); 
+ printf("è¿æ¥s2åçš„s3ä¸º:%s\n",s3); 
  } 
  
  void Delete(char str[]) {  
  int i,j,Length,StartBlank=0,EndBlank=0,MiddleBlank=0;
  Length=strlen(str);  
  for(i=0; i<Length; i++)   
-     /* É¾³ıÇ°µ¼¿Õ¸ñ */  
+     /* åˆ é™¤å‰å¯¼ç©ºæ ¼ */  
  if(str[i]==' ') 
      StartBlank++; 
  else
@@ -26,7 +26,7 @@ void link(char *s2,char *s3)
      str[j]=str[j+StartBlank]; 
  Length-=StartBlank;  
  for(i=Length-1; i>=0; i--)   
-     /* É¾³ıºóµ¼¿Õ¸ñ */ 
+     /* åˆ é™¤åå¯¼ç©ºæ ¼ */ 
  if(str[i]==' ') 
      EndBlank++; 
  else break; 
@@ -38,7 +38,7 @@ void link(char *s2,char *s3)
  EndBlank--;  
  }  
  i=0;  
- /* É¾³ıÖĞ¼ä¶àÓà¿Õ¸ñ */  
+ /* åˆ é™¤ä¸­é—´å¤šä½™ç©ºæ ¼ */  
  while(i<Length) 
      {    if(str[i]==' ') 
          {if(str[i+1]==' ')   
@@ -103,12 +103,12 @@ int main()
 		valid=veri(password);
 		if(valid)
 		{
-			printf("incorrect£¡"); 
+			printf("incorrectï¼"); 
 		}
 		else
 		{
 			getchar();
-			i=i+1£»
+			i=i+1ï¼›
             calc(password);
 			break;
 		}

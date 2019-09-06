@@ -162,7 +162,7 @@ def martrix_build(file, id):
     functionBodyList = []
 
     tokenList = readAnalysis.get_tokenList(file, id)
-    find_functions(tokenList,id)
+    functionList, functionBodyList = find_functions(tokenList, id)
     functionSet, functionDic = function_set(functionList)
     a = np.zeros([len(functionBodyList), len(functionSet)], dtype=np.int)
     x = -1

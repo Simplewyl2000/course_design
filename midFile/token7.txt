@@ -1,1 +1,0 @@
- ID < ID ID ID > INT ID ( ) { CHAR ID [ DIGIT ] = STRING ; CHAR ID [ DIGIT ] = STRING ; ID ( ID , ID ) ID ( ID , STRING , DIGIT ) ; RETURN DIGIT ; } 

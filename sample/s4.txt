@@ -8,7 +8,7 @@ static int16 do_poll(struct pllfd *pfd,unsigned int nfds,int16 timeout)
 	   if (ret<0){
 	      if(errno==EINTR)
 	         return 0;
-	       {log(LOG_ERR,¡±poll returned an error!\n¡±)};
+	       {log(LOG_ERR,Â¡Â±poll returned an error!\nÂ¡Â±)};
 	       return -1;
 	   }
 	   if (ret==0)

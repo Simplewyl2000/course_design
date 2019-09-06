@@ -5,7 +5,7 @@ Created on 2012-10-18
 @author: zouliping
 '''
 import string
-import sys
+import re
 
 _key = ("auto","break","case","char","const","continue","default",
 
@@ -74,13 +74,22 @@ def outOfComment():
 def getMyProm(filename):
     '''���ļ��л�ȡ����Ƭ��'''
     global _content
-    myPro = open(filename,'r')
+    flag = 0
+    myPro = open(filename,'r',encoding="utf-8")
 
     for line in myPro:
-        if line != '\n':
-            _content = "%s%s" %(_content,line.lstrip()) #Ч�ʸ��ߵ��ַ���ƴ�ӷ���
+        flag = 0
+        for i in line:
+            if i == '\n' or i == ' ':
+                continue
+            else:
+                flag = 1
+                break
+
+        if flag:
+            _content = "%s%s" % (_content, line.lstrip()) #Ч�ʸ��ߵ��ַ���ƴ�ӷ���
         else:
-            _content = "%s%s" %(_content,line)
+            _content = "%s%s" % (_content, line)
     myPro.close()
 
 def analysis(mystr):
@@ -107,9 +116,9 @@ def analysis(mystr):
         if _p == len(mystr):
             _flag = 0
 
-    if ch in string.letters or ch == '_':    ###############letter(letter|digit)*
+    if ch in string.ascii_letters or ch == '_':    ###############letter(letter|digit)*
         _funcname = ''
-        while ch in string.letters or ch in string.digits or ch == '_' or ch in _abnormalChar:
+        while ch in string.ascii_letters or ch in string.digits or ch == '_' or ch in _abnormalChar:
             _value += ch
             _funcname = _funcname + ch
             ch = mystr[_p]
@@ -124,7 +133,7 @@ def analysis(mystr):
                 _syn = 'ID'
 
         for s in _key:
-            if cmp(s,_value) == 0:
+            if s == _value:
                 _syn = _value.upper()               #############�ؼ���
                 break
         if _syn == 'ID':
@@ -133,7 +142,7 @@ def analysis(mystr):
             inSymbolTable(_value)
 
     elif ch == '\"':                        #############�ַ���
-        while ch in string.letters or ch in '\"% ' :
+        while ch in string.ascii_letters or ch in '\"% ' :
             _value += ch
             if _mstate == 0:
                 if ch == '\"':
@@ -156,7 +165,7 @@ def analysis(mystr):
         _p -= 1
 
     elif ch in string.digits:
-        while ch in string.digits or ch == '.' or ch in string.letters:
+        while ch in string.digits or ch == '.' or ch in string.ascii_letters:
             _value += ch
             if _dstate == 0:
                 if ch == '0':
@@ -177,7 +186,7 @@ def analysis(mystr):
             ch = mystr[_p]
             _p += 1
 
-        for char in string.letters:
+        for char in string.ascii_letters:
             if char in _value:
                 _syn = '@-7' #������룬���ֺ���ĸ��ϣ���12AB56��
                 _dstate = 0
@@ -200,7 +209,7 @@ def analysis(mystr):
 
 
     elif ch == '\'':                    ################## �ַ�
-        while ch in string.letters or ch in '@#$%&*\\\'\"':
+        while ch in string.ascii_letters or ch in '@#$%&*\\\'\"':
             _value += ch
             if _cstate == 0:
                 if ch == '\'':
@@ -209,7 +218,7 @@ def analysis(mystr):
             elif _cstate == 1:
                 if ch == '\\':
                     _cstate = 2
-                elif ch in string.letters or ch in '@#$%&*':
+                elif ch in string.ascii_letters or ch in '@#$%&*':
                     _cstate = 3
 
             elif _cstate == 2:
@@ -367,53 +376,38 @@ def inSymbolTable(token):
     if token not in _mysymbol:
         _mysymbol.append(token)
 
-if __name__ == '__main__':
-    filenameFromCMD = sys.argv[1]
-    getMyProm(filenameFromCMD)
+def processProgram(filepath, id):
+    global _line
+    getMyProm(filepath)
     outOfComment()
-    filepath1 = 'E:\\pycode\\sourceDetect\\midFile\\symbol_table' + str(sys.argv[2]) + ".txt"
-    filepath2 = 'E:\\pycode\\sourceDetect\\midFile\\token' + str(sys.argv[2]) + ".txt"
-    filepath3 = 'E:\\pycode\\sourceDetect\\midFile\\functionName' + str(sys.argv[2]) + ".txt"
-    filepath4 = 'E:\\pycode\\sourceDetect\\midFile\\functionLine' + str(sys.argv[2]) + ".txt"
+    filepath2 = 'midFile\\token' + str(id) + ".txt"
+    filepath3 = 'midFile\\functionName' + str(id) + ".txt"
+    filepath4 = 'midFile\\functionLine' + str(id) + ".txt"
 
-    symbolTableFile = open(filepath1,'w')
-    tokenFile = open(filepath2,'w')
+    tokenFile = open(filepath2, 'w')
     funcnameFile = open(filepath3, 'w')
-    functionLine = open(filepath4,'w')
+    functionLine = open(filepath4, 'w')
+    _flag = 1
     while _p != len(_content) and _flag:
         analysis(_content)
         if _syn == '@-1':
-            _line += 1 #��¼���������
-        elif _syn == '@-2':
-            print '�ַ��� ' + _value + ' �����! Error in line ' + str(_line)
-        elif _syn == '@-3':
-            print '���� ' + _value + ' ���󣬲�����0��ͷ! Error in line ' + str(_line)
-        elif _syn == '@-4':
-            print '�ַ� ' + _value + ' �����! Error in line ' + str(_line)
-        elif _syn == '@-5':
-            print '���� ' + _value + ' ���Ϸ�! Error in line ' + str(_line)
-        elif _syn == '@-6':
-            print '��ʶ��' + _value + ' ���ܰ����Ƿ��ַ�!Error in line ' + str(_line)
-        elif _syn == '@-7':
-            print '���� ' + _value + ' ���Ϸ�,������ĸ! Error in line ' + str(_line)
-        else: #���������޴ʷ���������
-            #print (_syn,_value)
-            tokenFile.write(str(_syn)+ " ")
+            _line += 1  # ��¼���������
+
+        else:  # ���������޴ʷ���������
+            tokenFile.write(str(_syn) + " ")
 
     tokenFile.close()
-    symbolTableFile.write('��ڵ�ַ\t������\n')
-    i = 0
-    for symbolItem in _mysymbol:
-        symbolTableFile.write(str(i)+'\t\t\t'+symbolItem+'\n')
-        i += 1
-    symbolTableFile.close()
 
     for func in _functionName:
         funcnameFile.write(func[0] + " ")
 
     for func in _functionName:
-        functionLine.write(str(func[1])+ " ")
-
+        functionLine.write(str(func[1]) + " ")
 
     funcnameFile.close()
     functionLine.close()
+
+
+
+if __name__ == '__main__':
+    processProgram("1.txt", 1)

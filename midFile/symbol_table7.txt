@@ -1,9 +1,0 @@
-��ڵ�ַ	������
-0			include
-1			stdio
-2			h
-3			main
-4			a
-5			b
-6			memcpy
-7			strncpy
