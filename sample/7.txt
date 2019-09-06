@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main(){
+   char a[8]="I am a ";
+   char b[9]="kkajshd";
+   strncpy(a,"lanzksndfkdfkj",6);
+   return 0;
+}

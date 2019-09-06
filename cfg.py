@@ -96,6 +96,9 @@ def find_sub_list(sl, l, preresult, isBody,id):
     functionLineInput = functionLineInputFile.read()
     functionNameList = functionNameInput.split(" ")
     functionLineList = functionLineInput.split(" ")
+    functionNameList.pop()
+    functionLineList.pop()
+
     functionNameInputFile.close()
     functionnnname =""
 
