@@ -4,14 +4,13 @@ import re
 
 sensitiveFunctions = ["memcpy", "memncpy", "strcat", "strncat", "sprintf", "vsprintf", "gets", "getchar", "fgetc", "getc", "read", "sscanf", "fscanf", "vfscanf", "vscanf", "vsscanf"]
 
-def findStrcpy(filename, id):
-    programpath = "sample//" + filename
-    program = open(programpath, "r", encoding="UTF-8")
-    tokenList = readAnalysis.get_tokenList(filename,id)
-    functionList, functionBodyList = cfg.find_functions(tokenList,id)
+def findStrcpy(fileinput,tokenList,id):
+
+    program = fileinput
+    functionList, functionBodyList = cfg.find_functions(tokenList, id)
     lineStart = 0
     lineStrcpy = 0
-    programLine =""
+    programLine = ""
     flag = 1
 
     for i in functionList:
@@ -38,7 +37,7 @@ def findStrcpy(filename, id):
     program.seek(0)
     a = findTheSize(program, argv1, lineStart, lineStrcpy)
 
-    if a != "not define the argv, it is not safe":
+    if a != "not define the %s in line %d, it is not safe" % (argv1, lineStrcpy):
         sizeOfargv1 = a
     else:
         return a
@@ -48,21 +47,20 @@ def findStrcpy(filename, id):
 
     else:
         b = findTheSize(program, argv2, lineStart, lineStrcpy)
-        if b != "not define the argv, it is not safe":
+        if b != "not define the %s in line %d, it is not safe" % (argv2, lineStrcpy):
             sizeOfargv2 = b
         else:
             return b
 
     if sizeOfargv1 >= sizeOfargv2:
-        return "It is safe!"
+        return "The strcpy is safe in line %d!" %(lineStrcpy)
     else:
-        return "Not safe! The size of argv2 is bigger than argv1!"
+        return "This strcpy in line %d is not safe! The size of argv2 is bigger than argv1!" %(lineStrcpy)
 
 
-def findStrncpy(filename,id):
-    programpath = "sample//" + filename
-    program = open(programpath, "r", encoding="UTF-8")
-    tokenList = readAnalysis.get_tokenList(filename, id)
+def findStrncpy(fileinput,tokenList,id):
+
+    program = fileinput
     functionList, functionBodyList = cfg.find_functions(tokenList, id)
     lineStart = 0
     lineStrncpy = 0
@@ -95,7 +93,7 @@ def findStrncpy(filename,id):
     program.seek(0)
     a = findTheSize(program, argv1, lineStart, lineStrncpy)
 
-    if a != "not define the argv, it is not safe":
+    if a != "not define the %s in line %d, it is not safe" % (argv1, lineStrncpy):
         sizeOfargv1 = a
     else:
         return a
@@ -104,9 +102,9 @@ def findStrncpy(filename,id):
 
 
     if sizeOfargv1 >= sizeOfargv3:
-        return "It is safe!"
+        return "The strncpy is safe in line %d!" % (lineStrncpy)
     else:
-        return "Not safe! The size of argv2 is bigger than argv1!"
+        return "This strncpy in line %d is not safe! The size of argv2 is bigger than argv1!" %(lineStrncpy)
 
 
 
@@ -124,10 +122,36 @@ def findTheSize(file, arg, begin, end):
             start, end = re.search(r'\b%s\[\d\b' % (arg), programLine).span()
             size = programLine[start+len(arg)+1]
     if flag:
-        return "not define the argv, it is not safe"
+        return "not define the %s in line %d, it is not safe" % (arg, end)
     else:
         return int(size)
 
 
+
+def findTheSensitive(fileInput,tokenList,id):
+
+    program = fileInput
+    functionList, functionBodyList = cfg.find_functions(tokenList, id)
+    warning =[]
+    for i in functionList:
+        if i.get_functionName() in sensitiveFunctions:
+            warning.append((i.get_functionName(), i.get_functionLine()))
+
+    if len(warning) != 0:
+        for i in warning:
+            print("%s may be dangerous in line %d" % (i[0], i[1]))
+    else:
+        print("no sensitive function")
+
+
+def detectStackOverflow(filename, id):
+    filepath = "sample\\" + filename
+    fileinput = open(filepath, "r",encoding="utf-8")
+    tokenList = readAnalysis.get_tokenList(filename, id)
+    print(findStrcpy(fileinput, tokenList, id))
+    print(findStrncpy(fileinput, tokenList, id))
+    findTheSensitive(fileinput, tokenList, id)
+
+
 if __name__ == "__main__":
-    print(findStrncpy("7.txt", 7))
+    detectStackOverflow("1.txt", 1)

@@ -1,1 +1,1 @@
-main strncpy 
+main memcpy strncpy 

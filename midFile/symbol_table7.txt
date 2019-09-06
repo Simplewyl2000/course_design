@@ -5,4 +5,5 @@
 3			main
 4			a
 5			b
-6			strncpy
+6			memcpy
+7			strncpy

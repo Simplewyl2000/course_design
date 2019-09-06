@@ -138,6 +138,10 @@ def find_sub_list(sl, l, preresult, isBody,id):
 def find_functions(tokenList,id):
     global functionList
     global functionBodyList
+    del functionList
+    functionList = []
+    del functionBodyList
+    functionBodyList = []
 
     functionList = find_sub_list(["ID", "("], tokenList, functionList, False, id)
     functionBodyList = find_sub_list(["INT", "ID", "("], tokenList, functionBodyList, True, id)
