@@ -83,7 +83,7 @@ void calc(char *s)
         
         if(flag)
         {
-            priintf(" :%2d\n",i);
+            printf(" :%2d\n",i);
             flag=0;
             flag2=1;
         }

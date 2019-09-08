@@ -5,44 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c81567a-25a3-4e80-ad70-93c26348b084" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/printfCheck.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/printfTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cfg.py" beforeDir="false" afterPath="$PROJECT_DIR$/cfg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cfg_compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/cfg_compare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionLine1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionLine2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionLine20.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionName2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionName20.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/symbol_table1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/symbol_table2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/symbol_table20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/symbol_table4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/symbol_table5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/symbol_table6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/symbol_table7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/token1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/token2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/token20.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/readAnalysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/1.txt.png" beforeDir="false" afterPath="$PROJECT_DIR$/result/cfg/1.txt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/4.txt.png" beforeDir="false" afterPath="$PROJECT_DIR$/result/cfg/4.txt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/midFile/functionName1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionName1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/s4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/s4.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stackOverflowTools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+            <state relative-caret-position="2394">
+              <caret line="128" selection-end-line="128" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -64,13 +31,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cfg_compare.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="133">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/printfTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3021">
+              <caret line="159" selection-start-line="159" selection-end-line="159" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,8 +55,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1957">
-              <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+            <state relative-caret-position="314">
+              <caret line="85" column="14" lean-forward="true" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample/8.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -88,21 +73,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readAnalysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="304">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/midFile/token2.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
+            <state relative-caret-position="634">
               <caret line="389" column="12" selection-start-line="389" selection-start-column="12" selection-end-line="389" selection-end-column="12" />
               <folding>
                 <element signature="e#74#87#0" expanded="true" />
@@ -114,20 +94,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cfg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="634">
               <caret line="164" selection-start-line="164" selection-end-line="164" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/midFile/functionLine1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="46" selection-start-column="46" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -165,6 +136,8 @@
       <find>id</find>
       <find>&quot;not define the argv&quot;</find>
       <find>string.letters</find>
+      <find>lineStrcpy</find>
+      <find>if(!</find>
     </findStrings>
     <replaceStrings>
       <replace>programLine</replace>
@@ -172,6 +145,7 @@
       <replace>word2</replace>
       <replace>preDefine2</replace>
       <replace>string.ascii_letters</replace>
+      <replace>linePrintf</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -185,15 +159,18 @@
         <option value="$PROJECT_DIR$/sample/6.txt" />
         <option value="$PROJECT_DIR$/sample/7.txt" />
         <option value="$PROJECT_DIR$/stackOverflowTools.py" />
-        <option value="$PROJECT_DIR$/sample/1.txt" />
         <option value="$PROJECT_DIR$/readAnalysis.py" />
         <option value="$PROJECT_DIR$/cfg_compare.py" />
         <option value="$PROJECT_DIR$/cfg.py" />
         <option value="$PROJECT_DIR$/analysis.py" />
+        <option value="$PROJECT_DIR$/printfCheck.py" />
+        <option value="$PROJECT_DIR$/sample/8.txt" />
+        <option value="$PROJECT_DIR$/sample/1.txt" />
+        <option value="$PROJECT_DIR$/printfTest.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="980" />
@@ -215,11 +192,6 @@
             <path>
               <item name="sourceDetect" type="b2602c69:ProjectViewProjectNode" />
               <item name="sourceDetect" type="462c0819:PsiDirectoryNode" />
-              <item name="midFile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sourceDetect" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sourceDetect" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -232,10 +204,10 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/anna/python.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -249,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.cfg_compare">
+  <component name="RunManager" selected="Python.printfTest">
     <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sourceDetect" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,7 +288,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="readAnalysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="printfTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sourceDetect" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -329,7 +301,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/readAnalysis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/printfTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -362,11 +334,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.printfTest" />
         <item itemvalue="Python.cfg_compare" />
         <item itemvalue="Python.cfg" />
         <item itemvalue="Python.stackOverflowTools" />
         <item itemvalue="Python.analysis" />
-        <item itemvalue="Python.readAnalysis" />
       </list>
     </recent_temporary>
   </component>
@@ -393,23 +365,26 @@
       <workItem from="1567669562976" duration="2826000" />
       <workItem from="1567739517166" duration="3504000" />
       <workItem from="1567758760386" duration="7144000" />
-      <workItem from="1567767431080" duration="5128000" />
+      <workItem from="1567767431080" duration="8008000" />
+      <workItem from="1567818241440" duration="1034000" />
+      <workItem from="1567855497000" duration="5016000" />
+      <workItem from="1567905534559" duration="2924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80328000" />
+    <option name="totallyTimeSpent" value="92182000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4886598" visible="true" weight="0.1427614" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4886598" visible="true" weight="0.14879356" />
       <window_info id="Structure" order="1" sideWeight="0.5113402" side_tool="true" weight="0.1347185" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32918397" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32825485" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32825485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,15 +406,37 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/printfTest.py</url>
+          <line>159</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/printfTest.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/printfTest.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/printfTest.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="functionList" language="Python" />
-        <watch expression="_content''" language="Python" />
-        <watch expression="_content" language="Python" />
-        <watch expression="a" />
         <watch expression="programLine" language="Python" />
-        <watch expression="siz" language="Python" />
-        <watch expression="_flag" language="Python" />
+        <watch expression="k" language="Python" />
+        <watch expression="functionBodyList" />
+        <watch expression="linePrintf" language="Python" />
+        <watch expression="lineStart" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -450,9 +447,25 @@
     <SUITE FILE_PATH="coverage/sourceDetect$stackOverflowTools.coverage" NAME="stackOverflowTools Coverage Results" MODIFIED="1567770071294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$readAnalysis.coverage" NAME="readAnalysis Coverage Results" MODIFIED="1567010831319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1567769522254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sourceDetect$printfTest.coverage" NAME="printfTest Coverage Results" MODIFIED="1567908446751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>lineStart</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>linePrintf</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>k</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>_flag</expression-string>
         <language-id>Python</language-id>
@@ -485,21 +498,6 @@
       </expression>
       <expression>
         <expression-string>tokenList[3156]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>tokenList[3134]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>tokenList[3135]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>tokenList[3123]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -581,22 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stackOverflowTools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/midFile/functionLine10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/midFile/token10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/midFile/functionLine1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -604,26 +586,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1957">
-          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/printfCheck.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/readAnalysis.py">
+    <entry file="file://$PROJECT_DIR$/cfg_compare.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="247">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/midFile/token2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://E:/anna/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stackOverflowTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2394">
+          <caret line="128" selection-end-line="128" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/midFile/token10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
+        <state relative-caret-position="634">
           <caret line="389" column="12" selection-start-line="389" selection-start-column="12" selection-end-line="389" selection-end-column="12" />
           <folding>
             <element signature="e#74#87#0" expanded="true" />
@@ -631,9 +632,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/midFile/functionLine10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cfg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="634">
           <caret line="164" selection-start-line="164" selection-end-line="164" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -641,12 +645,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfg_compare.py">
+    <entry file="file://$PROJECT_DIR$/readAnalysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="85" column="14" lean-forward="true" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printfTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3021">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
