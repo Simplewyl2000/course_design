@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 int veri(char *password)
 {
 	int auther;
@@ -95,6 +95,8 @@ void calc(char *s)
 int main()
 {
 	int valid=0;
+	char isChecked = "c"; 
+	isChecked = valid;
 	char password[1024];
 	while(1)
 	{

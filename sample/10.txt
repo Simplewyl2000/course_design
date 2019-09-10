@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+	int valid=0;
+	char isChecked = 'c';
+	isChecked = valid;
+	char password[1024];
+	while(1)
+	{
+		printf("password?");
+		scanf("%s",password);
+		valid=veri(password);
+		if(valid)
+		{
+			printf("incorrect£¡");
+		}
+		else
+		{
+			printf("correct!");
+            calc(password);
+			break;
+		}
+	}
+}

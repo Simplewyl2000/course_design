@@ -1,0 +1,511 @@
+func	2:0	9:0	0	int	veri
+params	2:8	0:0	1	
+param	2:9	2:23	2	char *	password
+stmnts	0:0	8:14	1	
+decl	4:1	4:11	2	int	auther
+decl	5:1	5:15	2	char	buffer[8]
+water	6:1	0:0	2	auther
+op	6:7	0:0	2	=
+call	6:8	6:36	2	strcmp
+arg	6:15	6:23	3	password
+water	6:15	0:0	4	password
+arg	6:24	6:36	3	"1234567333"
+water	6:24	0:0	4	"1234567333"
+water	6:37	0:0	2	;
+call	7:1	7:23	2	strcpy
+arg	7:8	7:14	3	buffer
+water	7:8	0:0	4	buffer
+arg	7:15	7:23	3	password
+water	7:15	0:0	4	password
+water	7:24	0:0	2	;
+return	8:1	8:14	2	auther
+water	8:8	0:0	3	auther
+func	10:0	14:1	0	void	link
+params	10:9	0:0	1	
+param	10:10	10:18	2	char *	s2
+param	10:19	10:27	2	char *	s3
+stmnts	12:1	13:31	1	
+call	12:1	12:13	2	strcat
+arg	12:8	12:10	3	s3
+water	12:8	0:0	4	s3
+arg	12:11	12:13	3	s2
+water	12:11	0:0	4	s2
+water	12:14	0:0	2	;
+call	13:1	13:30	2	printf
+arg	13:8	13:27	3	"连接s2后的s3�?:%s\n"
+water	13:8	0:0	4	"连接s2后的s3�?:%s\n"
+arg	13:28	13:30	3	s3
+water	13:28	0:0	4	s3
+water	13:31	0:0	2	;
+func	16:1	55:0	0	void	Delete
+params	16:12	0:0	1	
+param	16:13	16:23	2	char	str[]
+stmnts	0:0	54:6	1	
+decl	17:1	17:53	2	int	i
+water	17:6	0:0	2	,
+decl	17:1	17:53	2	int	j
+water	17:8	0:0	2	,
+decl	17:1	17:53	2	int	Length
+water	17:15	0:0	2	,
+decl	17:1	17:53	2	int	StartBlank
+op	17:26	0:0	2	=
+water	17:27	0:0	2	0
+water	17:28	0:0	2	,
+decl	17:1	17:53	2	int	EndBlank
+op	17:37	0:0	2	=
+water	17:38	0:0	2	0
+water	17:39	0:0	2	,
+decl	17:1	17:53	2	int	MiddleBlank
+op	17:51	0:0	2	=
+water	17:52	0:0	2	0
+water	18:1	0:0	2	Length
+op	18:7	0:0	2	=
+call	18:8	18:18	2	strlen
+arg	18:15	18:18	3	str
+water	18:15	0:0	4	str
+water	18:19	0:0	2	;
+for	19:1	22:17	2	(i = 0 ;i < Length;i ++)
+forinit	19:5	19:8	3	i = 0 ;
+water	19:5	0:0	4	i
+op	19:6	0:0	4	=
+water	19:7	0:0	4	0
+water	19:8	0:0	4	;
+cond	19:10	19:12	3	i < Length
+water	19:10	0:0	4	i
+op	19:11	0:0	4	<
+water	19:12	0:0	4	Length
+forexpr	19:20	19:21	3	i ++
+water	19:20	0:0	4	i
+op	19:21	0:0	4	++
+stmts	21:1	22:17	3	
+if	21:1	22:17	4	(str [ i ] == ' ')
+cond	21:4	21:12	5	str [ i ] == ' '
+water	21:4	0:0	6	str
+op	21:7	0:0	6	[
+water	21:8	0:0	6	i
+op	21:9	0:0	6	]
+op	21:10	0:0	6	==
+water	21:12	0:0	6	' '
+stmts	22:5	22:17	5	
+water	22:5	0:0	6	StartBlank
+op	22:15	0:0	6	++
+water	22:17	0:0	6	;
+else	23:1	24:10	2
+stmts	24:5	24:10	3	
+break	24:5	24:10	4	
+for	25:1	26:29	2	(j = 0 ;j < Length;j ++)
+forinit	25:5	25:8	3	j = 0 ;
+water	25:5	0:0	4	j
+op	25:6	0:0	4	=
+water	25:7	0:0	4	0
+water	25:8	0:0	4	;
+cond	25:10	25:12	3	j < Length
+water	25:10	0:0	4	j
+op	25:11	0:0	4	<
+water	25:12	0:0	4	Length
+forexpr	25:20	25:21	3	j ++
+water	25:20	0:0	4	j
+op	25:21	0:0	4	++
+stmts	26:5	26:29	3	
+water	26:5	0:0	4	str
+op	26:8	0:0	4	[
+water	26:9	0:0	4	j
+op	26:10	0:0	4	]
+op	26:11	0:0	4	=
+water	26:12	0:0	4	str
+op	26:15	0:0	4	[
+water	26:16	0:0	4	j
+op	26:17	0:0	4	+
+water	26:18	0:0	4	StartBlank
+op	26:28	0:0	4	]
+water	26:29	0:0	4	;
+water	27:1	0:0	2	Length
+op	27:7	0:0	2	-=
+water	27:9	0:0	2	StartBlank
+water	27:19	0:0	2	;
+for	28:1	31:15	2	(i = Length - 1 ;i >= 0;i --)
+forinit	28:5	28:15	3	i = Length - 1 ;
+water	28:5	0:0	4	i
+op	28:6	0:0	4	=
+water	28:7	0:0	4	Length
+op	28:13	0:0	4	-
+water	28:14	0:0	4	1
+water	28:15	0:0	4	;
+cond	28:17	28:20	3	i >= 0
+water	28:17	0:0	4	i
+op	28:18	0:0	4	>=
+water	28:20	0:0	4	0
+forexpr	28:23	28:24	3	i --
+water	28:23	0:0	4	i
+op	28:24	0:0	4	--
+stmts	30:1	31:15	3	
+if	30:1	31:15	4	(str [ i ] == ' ')
+cond	30:4	30:12	5	str [ i ] == ' '
+water	30:4	0:0	6	str
+op	30:7	0:0	6	[
+water	30:8	0:0	6	i
+op	30:9	0:0	6	]
+op	30:10	0:0	6	==
+water	30:12	0:0	6	' '
+stmts	31:5	31:15	5	
+water	31:5	0:0	6	EndBlank
+op	31:13	0:0	6	++
+water	31:15	0:0	6	;
+else	32:1	32:11	2
+stmts	32:6	32:11	3	
+break	32:6	32:11	4	
+water	33:1	0:0	2	Length
+op	33:7	0:0	2	-=
+water	33:9	0:0	2	EndBlank
+water	33:17	0:0	2	;
+while	35:1	39:1	2	(EndBlank > 0)
+cond	35:7	35:16	3	EndBlank > 0
+water	35:7	0:0	4	EndBlank
+op	35:15	0:0	4	>
+water	35:16	0:0	4	0
+stmts	36:1	39:1	3	
+water	36:1	0:0	4	{
+water	37:1	0:0	4	str
+op	37:4	0:0	4	[
+water	37:5	0:0	4	Length
+op	37:11	0:0	4	-
+water	37:12	0:0	4	1
+op	37:13	0:0	4	+
+water	37:14	0:0	4	EndBlank
+op	37:22	0:0	4	]
+op	37:23	0:0	4	=
+water	37:24	0:0	4	str
+op	37:27	0:0	4	[
+water	37:28	0:0	4	Length
+op	37:34	0:0	4	+
+water	37:35	0:0	4	EndBlank
+op	37:43	0:0	4	]
+water	37:44	0:0	4	;
+water	38:1	0:0	4	EndBlank
+op	38:9	0:0	4	--
+water	38:11	0:0	4	;
+water	39:1	0:0	4	}
+water	40:1	0:0	2	i
+op	40:2	0:0	2	=
+water	40:3	0:0	2	0
+water	40:4	0:0	2	;
+while	42:1	54:6	2	(i < Length)
+cond	42:7	42:9	3	i < Length
+water	42:7	0:0	4	i
+op	42:8	0:0	4	<
+water	42:9	0:0	4	Length
+stmts	43:5	54:6	3	
+water	43:5	0:0	4	{
+if	43:10	52:9	4	(str [ i ] == ' ')
+cond	43:13	43:21	5	str [ i ] == ' '
+water	43:13	0:0	6	str
+op	43:16	0:0	6	[
+water	43:17	0:0	6	i
+op	43:18	0:0	6	]
+op	43:19	0:0	6	==
+water	43:21	0:0	6	' '
+stmts	44:9	52:9	5	
+water	44:9	0:0	6	{
+if	44:10	50:9	6	(str [ i + 1 ] == ' ')
+cond	44:13	44:23	7	str [ i + 1 ] == ' '
+water	44:13	0:0	8	str
+op	44:16	0:0	8	[
+water	44:17	0:0	8	i
+op	44:18	0:0	8	+
+water	44:19	0:0	8	1
+op	44:20	0:0	8	]
+op	44:21	0:0	8	==
+water	44:23	0:0	8	' '
+stmts	45:13	50:9	7	
+water	45:13	0:0	8	{
+for	46:9	47:28	8	(j = i + 1 ;j < Length;j ++)
+forinit	46:13	46:18	9	j = i + 1 ;
+water	46:13	0:0	10	j
+op	46:14	0:0	10	=
+water	46:15	0:0	10	i
+op	46:16	0:0	10	+
+water	46:17	0:0	10	1
+water	46:18	0:0	10	;
+cond	46:20	46:22	9	j < Length
+water	46:20	0:0	10	j
+op	46:21	0:0	10	<
+water	46:22	0:0	10	Length
+forexpr	46:30	46:31	9	j ++
+water	46:30	0:0	10	j
+op	46:31	0:0	10	++
+stmts	47:13	47:28	9	
+water	47:13	0:0	10	str
+op	47:16	0:0	10	[
+water	47:17	0:0	10	j
+op	47:18	0:0	10	]
+op	47:19	0:0	10	=
+water	47:20	0:0	10	str
+op	47:23	0:0	10	[
+water	47:24	0:0	10	j
+op	47:25	0:0	10	+
+water	47:26	0:0	10	1
+op	47:27	0:0	10	]
+water	47:28	0:0	10	;
+water	48:9	0:0	8	MiddleBlank
+op	48:20	0:0	8	++
+water	48:22	0:0	8	;
+water	49:9	0:0	8	Length
+op	49:15	0:0	8	--
+water	49:17	0:0	8	;
+water	50:9	0:0	8	}
+else	51:9	51:17	6
+stmts	51:14	51:17	7	
+water	51:14	0:0	8	i
+op	51:15	0:0	8	++
+water	51:17	0:0	8	;
+water	52:9	0:0	6	}
+else	53:9	53:17	4
+stmts	53:14	53:17	5	
+water	53:14	0:0	6	i
+op	53:15	0:0	6	++
+water	53:17	0:0	6	;
+water	54:6	0:0	4	}
+func	56:0	93:0	0	void	calc
+params	56:9	0:0	1	
+param	56:10	56:17	2	char *	s
+stmnts	0:0	92:30	1	
+decl	58:4	58:13	2	int	i
+op	58:10	0:0	2	=
+water	58:12	0:0	2	0
+decl	59:4	59:13	2	int	j
+op	59:10	0:0	2	=
+water	59:12	0:0	2	0
+decl	60:4	60:15	2	int	max
+op	60:12	0:0	2	=
+water	60:14	0:0	2	0
+decl	61:4	61:23	2	int	count[26]
+op	61:18	0:0	2	=
+water	61:20	0:0	2	{
+water	61:21	0:0	2	0
+water	61:22	0:0	2	}
+decl	62:4	62:16	2	int	flag
+op	62:13	0:0	2	=
+water	62:15	0:0	2	0
+decl	63:4	63:17	2	int	flag2
+op	63:14	0:0	2	=
+water	63:16	0:0	2	0
+call	64:4	64:12	2	assert
+arg	64:11	64:12	3	s
+water	64:11	0:0	4	s
+water	64:13	0:0	2	;
+for	65:4	72:4	2	(i = 0 ;s [ i ] != '\0';i ++)
+forinit	65:8	65:11	3	i = 0 ;
+water	65:8	0:0	4	i
+op	65:9	0:0	4	=
+water	65:10	0:0	4	0
+water	65:11	0:0	4	;
+cond	65:12	65:18	3	s [ i ] != '\0'
+water	65:12	0:0	4	s
+op	65:13	0:0	4	[
+water	65:14	0:0	4	i
+op	65:15	0:0	4	]
+op	65:16	0:0	4	!=
+water	65:18	0:0	4	'\0'
+forexpr	65:23	65:24	3	i ++
+water	65:23	0:0	4	i
+op	65:24	0:0	4	++
+stmts	66:4	72:4	3	
+water	66:4	0:0	4	{
+if	67:8	71:8	4	(s [ i ] >= 'a' && s [ i ] <= 'z')
+cond	67:11	67:30	5	s [ i ] >= 'a' && s [ i ] <= 'z'
+water	67:11	0:0	6	s
+op	67:12	0:0	6	[
+water	67:13	0:0	6	i
+op	67:14	0:0	6	]
+op	67:15	0:0	6	>=
+water	67:17	0:0	6	'a'
+op	67:21	0:0	6	&&
+water	67:24	0:0	6	s
+op	67:25	0:0	6	[
+water	67:26	0:0	6	i
+op	67:27	0:0	6	]
+op	67:28	0:0	6	<=
+water	67:30	0:0	6	'z'
+stmts	68:8	71:8	5	
+water	68:8	0:0	6	{
+water	69:12	0:0	6	max
+op	69:16	0:0	6	=
+water	69:18	0:0	6	(
+op	69:19	0:0	6	++
+water	69:21	0:0	6	count
+op	69:26	0:0	6	[
+water	69:27	0:0	6	(
+water	69:28	0:0	6	int
+water	69:31	0:0	6	)
+water	69:32	0:0	6	s
+op	69:33	0:0	6	[
+water	69:34	0:0	6	i
+op	69:35	0:0	6	]
+op	69:36	0:0	6	-
+water	69:37	0:0	6	97
+op	69:39	0:0	6	]
+water	69:40	0:0	6	)
+op	69:41	0:0	6	>
+water	69:42	0:0	6	max
+water	69:45	0:0	6	?
+water	69:46	0:0	6	count
+op	69:51	0:0	6	[
+water	69:52	0:0	6	(
+water	69:53	0:0	6	int
+water	69:56	0:0	6	)
+water	69:57	0:0	6	s
+op	69:58	0:0	6	[
+water	69:59	0:0	6	i
+op	69:60	0:0	6	]
+op	69:61	0:0	6	-
+water	69:62	0:0	6	97
+op	69:64	0:0	6	]
+water	69:65	0:0	6	:
+water	69:66	0:0	6	max
+water	69:69	0:0	6	;
+water	71:8	0:0	6	}
+water	72:4	0:0	4	}
+for	73:4	90:4	2	(i = 1 ;i <= max;i ++)
+forinit	73:8	73:11	3	i = 1 ;
+water	73:8	0:0	4	i
+op	73:9	0:0	4	=
+water	73:10	0:0	4	1
+water	73:11	0:0	4	;
+cond	73:12	73:15	3	i <= max
+water	73:12	0:0	4	i
+op	73:13	0:0	4	<=
+water	73:15	0:0	4	max
+forexpr	73:19	73:20	3	i ++
+water	73:19	0:0	4	i
+op	73:20	0:0	4	++
+stmts	74:4	90:4	3	
+water	74:4	0:0	4	{
+for	75:8	82:8	4	(j = 0 ;j < 25;j ++)
+forinit	75:12	75:15	5	j = 0 ;
+water	75:12	0:0	6	j
+op	75:13	0:0	6	=
+water	75:14	0:0	6	0
+water	75:15	0:0	6	;
+cond	75:16	75:18	5	j < 25
+water	75:16	0:0	6	j
+op	75:17	0:0	6	<
+water	75:18	0:0	6	25
+forexpr	75:21	75:22	5	j ++
+water	75:21	0:0	6	j
+op	75:22	0:0	6	++
+stmts	76:8	82:8	5	
+water	76:8	0:0	6	{
+if	77:12	81:12	6	(count [ j ] == i)
+cond	77:15	77:25	7	count [ j ] == i
+water	77:15	0:0	8	count
+op	77:20	0:0	8	[
+water	77:21	0:0	8	j
+op	77:22	0:0	8	]
+op	77:23	0:0	8	==
+water	77:25	0:0	8	i
+stmts	78:12	81:12	7	
+water	78:12	0:0	8	{
+call	79:16	79:40	8	printf
+arg	79:23	79:27	9	"%c"
+water	79:23	0:0	10	"%c"
+arg	79:28	79:40	9	(char)(j+97)
+call	79:28	79:39	10	(char)
+arg	79:35	79:39	11	j+97
+water	79:35	0:0	12	j
+op	79:36	0:0	12	+
+water	79:37	0:0	12	97
+water	79:41	0:0	8	;
+water	80:16	0:0	8	flag
+op	80:20	0:0	8	=
+water	80:21	0:0	8	1
+water	80:22	0:0	8	;
+water	81:12	0:0	8	}
+water	82:8	0:0	6	}
+if	84:8	89:8	4	(flag)
+cond	84:11	84:11	5	flag
+water	84:11	0:0	6	flag
+stmts	85:8	89:8	5	
+water	85:8	0:0	6	{
+call	86:12	86:30	6	printf
+arg	86:19	86:28	7	" :%2d\n"
+water	86:19	0:0	8	" :%2d\n"
+arg	86:29	86:30	7	i
+water	86:29	0:0	8	i
+water	86:31	0:0	6	;
+water	87:12	0:0	6	flag
+op	87:16	0:0	6	=
+water	87:17	0:0	6	0
+water	87:18	0:0	6	;
+water	88:12	0:0	6	flag2
+op	88:17	0:0	6	=
+water	88:18	0:0	6	1
+water	88:19	0:0	6	;
+water	89:8	0:0	6	}
+water	90:4	0:0	4	}
+if	91:4	92:30	2	(! flag2)
+cond	91:7	91:8	3	! flag2
+op	91:7	0:0	4	!
+water	91:8	0:0	4	flag2
+stmts	92:8	92:30	3	
+call	92:8	92:29	4	printf
+arg	92:15	92:29	5	"not match!\n"
+water	92:15	0:0	6	"not match!\n"
+water	92:30	0:0	4	;
+func	95:0	117:0	0	int	main
+stmnts	0:0	116:1	1	
+decl	97:1	97:12	2	int	valid
+op	97:10	0:0	2	=
+water	97:11	0:0	2	0
+decl	98:1	98:21	2	char	isChecked
+op	98:16	0:0	2	=
+water	98:18	0:0	2	"c"
+water	99:1	0:0	2	isChecked
+op	99:11	0:0	2	=
+water	99:13	0:0	2	valid
+water	99:18	0:0	2	;
+decl	100:1	100:20	2	char	password[1024]
+while	101:1	116:1	2	(1)
+cond	101:7	101:7	3	1
+water	101:7	0:0	4	1
+stmts	102:1	116:1	3	
+water	102:1	0:0	4	{
+call	103:2	103:20	4	printf
+arg	103:9	103:20	5	"password?"
+water	103:9	0:0	6	"password?"
+water	103:21	0:0	4	;
+call	104:2	104:21	4	scanf
+arg	104:8	104:12	5	"%s"
+water	104:8	0:0	6	"%s"
+arg	104:13	104:21	5	password
+water	104:13	0:0	6	password
+water	104:22	0:0	4	;
+water	105:2	0:0	4	valid
+op	105:7	0:0	4	=
+call	105:8	105:21	4	veri
+arg	105:13	105:21	5	password
+water	105:13	0:0	6	password
+water	105:22	0:0	4	;
+if	106:2	109:2	4	(valid)
+cond	106:5	106:5	5	valid
+water	106:5	0:0	6	valid
+stmts	107:2	109:2	5	
+water	107:2	0:0	6	{
+call	108:3	108:23	6	printf
+arg	108:10	108:23	7	"incorrect�?"
+water	108:10	0:0	8	"incorrect�?"
+water	108:24	0:0	6	;
+water	109:2	0:0	6	}
+else	110:2	115:2	4
+stmts	111:2	115:2	5	
+water	111:2	0:0	6	{
+call	112:3	112:20	6	printf
+arg	112:10	112:20	7	"correct!"
+water	112:10	0:0	8	"correct!"
+water	112:21	0:0	6	;
+call	113:12	113:25	6	calc
+arg	113:17	113:25	7	password
+water	113:17	0:0	8	password
+water	113:26	0:0	6	;
+break	114:3	114:8	6	
+water	115:2	0:0	6	}
+water	116:1	0:0	4	}

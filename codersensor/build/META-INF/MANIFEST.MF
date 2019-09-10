@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: ANTLR
+Implementation-Title: ANTLR 3 Complete
+Implementation-Version: 3.5.2
+Implementation-Vendor-Id: org.antlr
+Build-Jdk: 1.7.0_51
+Built-By: Sam Harwell
+Created-By: Apache Maven 3.0.5
+Main-Class: org.antlr.Tool
+Archiver-Version: Plexus Archiver
+
