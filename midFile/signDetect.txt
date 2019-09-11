@@ -1,0 +1,41 @@
+func	3:0	15:0	0	int	main
+stmnts	0:0	14:11	1	
+decl	4:3	4:22	2	char	a[8]
+op	4:12	0:0	2	=
+water	4:13	0:0	2	"I am a "
+decl	5:3	5:22	2	char	b[9]
+op	5:12	0:0	2	=
+water	5:13	0:0	2	"kkajshd"
+decl	6:3	6:8	2	int	c
+decl	7:3	7:17	2	unsigned int	d
+water	8:3	0:0	2	c
+op	8:5	0:0	2	=
+water	8:7	0:0	2	0
+water	8:8	0:0	2	;
+water	9:3	0:0	2	d
+op	9:5	0:0	2	=
+op	9:7	0:0	2	-
+water	9:8	0:0	2	10
+water	9:10	0:0	2	;
+water	10:3	0:0	2	c
+op	10:5	0:0	2	=
+water	10:6	0:0	2	d
+water	10:7	0:0	2	;
+call	11:3	11:15	2	memcpy
+arg	11:10	11:11	3	a
+water	11:10	0:0	4	a
+arg	11:12	11:13	3	b
+water	11:12	0:0	4	b
+arg	11:14	11:15	3	d
+water	11:14	0:0	4	d
+water	11:16	0:0	2	;
+call	12:3	12:32	2	strncpy
+arg	12:11	12:12	3	a
+water	12:11	0:0	4	a
+arg	12:13	12:29	3	"lanzksndfkdfkj"
+water	12:13	0:0	4	"lanzksndfkdfkj"
+arg	12:30	12:32	3	10
+water	12:30	0:0	4	10
+water	12:33	0:0	2	;
+return	14:3	14:11	2	0
+water	14:10	0:0	3	0

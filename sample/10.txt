@@ -13,7 +13,7 @@ int main()
 		valid=veri(password);
 		if(valid)
 		{
-			printf("incorrect£¡");
+			printf("incorrectÂ£Â¡");
 		}
 		else
 		{

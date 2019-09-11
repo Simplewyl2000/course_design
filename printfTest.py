@@ -150,9 +150,12 @@ def matchType(file, arg, begin, end):
     if flag:
         return "not define the %s in line %d, it is not safe" % (arg, end)
 
-
-
-
+def detectPrintf(filename,id):
+    filepath = "sample\\" + filename
+    f = open(filepath, "r", encoding="utf-8")
+    tokens = readAnalysis.get_tokenList("1.txt", 1)
+    warnings = findPrintf(f, tokens, 1)
+    return warnings
 
 if __name__ == "__main__":
     f = open("sample\\1.txt", "r", encoding="utf-8")

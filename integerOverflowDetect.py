@@ -4,6 +4,7 @@ import os
 class Variable:
 
     _type = 0
+    _value = 0
     _name = ""
     _belongToFunction = ""
 
@@ -18,8 +19,11 @@ class Variable:
     def set_belongToFunction(self,a):
         self._belongToFunction = a
 
-    def set_name(self,a):
+    def set_name(self, a):
         self._name = a
+
+    def set_value(self, a):
+        self._value = a
 
     def get_type(self):
         return self._type
@@ -30,13 +34,15 @@ class Variable:
     def get_name(self):
         return self._name
 
+    def get_value(self):
+        return self._value
 
 
 def detectIntegerOverflow(filename):
     filepath = "sample\\" + filename
-    command = "java -jar codersensor\\CodeSensor.jar " + filepath + " >midFile\\shuchu.txt"
+    command = "java -jar codersensor\\CodeSensor.jar " + filepath + " >midFile\\widthDetect.txt"
     os.system(command)
-    linesToAnalyse, variable = analyseCodersensor()
+    linesToAnalyse, variable = analyseCodersensor("widthDetect.txt")
     program = open(filepath, "r", encoding="utf-8")
     warings = []
     varnames = []
@@ -63,7 +69,7 @@ def detectIntegerOverflow(filename):
                 if (ans[0] in varnames) and ((ans[2] in varnames) or (ans[2].startswith('-') and ans[2][1:] or ans[2]).isdigit()):
                     detectResult = detect(findVariable(ans[0], variable), findVariable(ans[2], variable))
                     if detectResult == "Overflow":
-                        warings.append(((programLine.replace("\n", "").strip() + detectResult), j+1))
+                        warings.append(("Line %d:" % (j+1) + programLine.replace("\n", "").strip() + "\n" + " "+ detectResult))
                 else:
                     continue
     return warings
@@ -76,7 +82,6 @@ def findVariable(name, variable):
         for i in variable:
             if i.get_name() == name:
                 return i
-
 
 
 def detect(var1, var2):
@@ -158,8 +163,8 @@ def detect(var1, var2):
                 return "OK"
 
 
-def analyseCodersensor():
-    filepath = "midfile\\shuchu.txt"
+def analyseCodersensor(filename):
+    filepath = "midfile\\"+filename
     analysis = open(filepath, "r")
     functionBeginEnd = []
     variables = []
@@ -180,4 +185,4 @@ def analyseCodersensor():
 if __name__ == "__main__":
     warnings = detectIntegerOverflow("1.txt")
     for i in warnings:
-        print(i[0] + " in line %d" % i[1])
+        print(i)

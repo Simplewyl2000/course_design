@@ -1,0 +1,4 @@
+2.txt  copyRate:100.0%  sequence similarity 82.18157181571816%  *
+11.txt  copyRate:9.090909090909092%  sequence similarity 31.428571428571427%
+9.txt  copyRate:7.6923076923076925%  sequence similarity 5.810200129115558%
+9.txt  copyRate:7.6923076923076925%  sequence similarity 5.810200129115558%

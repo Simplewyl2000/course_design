@@ -1,12 +1,15 @@
 ﻿#include <stdio.h>
+
 int veri(char *password)
 {
 	int auther;
 	char buffer[8];
 	auther=strcmp(password,"1234567333");
 	strcpy(buffer,password);
+
 	return auther;
 }
+
 void link(char *s2,char *s3) 
 { 
  strcat(s3,s2); 

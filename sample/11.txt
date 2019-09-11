@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+   char a[8]="I am a ";
+   char b[9]="kkajshd";
+   int c;
+   unsigned int d;
+   c = 0;
+   d = -10;
+   c =d;
+   memcpy(a,b,d);
+   strncpy(a,"lanzksndfkdfkj",10);
+
+   return 0;
+}

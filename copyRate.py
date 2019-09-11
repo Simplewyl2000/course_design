@@ -59,6 +59,10 @@ copyRate_count
 
 def copyRate_count(filename1, filename2, outfile):
 
+
+    filepath1 = "sample\\"+filename1
+    filepath2 = "sample\\"+filename2
+    outpath = "result\\copyrate\\" + outfile
     countBase = [['int', 0], ['long', 0], ['short', 0], ['float', 0], ['double', 0], ['char', 0], ['unsigned', 0], ['signed', 0], ['const', 0], ['void', 0], ['volatile', 0], ['enum', 0], ['struct', 0], ['union', 0],
            ['if', 0], ['else', 0], ['goto', 0], ['switch', 0], ['case', 0], ['do', 0], ['while', 0], ['for', 0], ['continue', 0], ['break', 0], ['return', 0], ['default', 0], ['auto', 0], ['register', 0], ['extern', 0],
            ['static', 0], ['sizeof', 0], ['printf', 0], ['scanf', 0], ['fopen', 0], ['fclose', 0], ]
@@ -67,7 +71,7 @@ def copyRate_count(filename1, filename2, outfile):
     preDefine2 = []
     sequence1 = []
     sequence2 = []
-    file = open(filename1)
+    file = open(filepath1, encoding="utf-8")
 
     while 1:
         programLine = file.readline()
@@ -86,8 +90,7 @@ def copyRate_count(filename1, filename2, outfile):
 
     preDefine2 = []
 
-
-    file = open(filename2)
+    file = open(filepath2, encoding="utf-8")
     while 1:
         programLine = file.readline()
         if not programLine:
@@ -118,12 +121,7 @@ def copyRate_count(filename1, filename2, outfile):
     lcsubstr = find_lcsubstr(programSequence1,programSequence2)
     print(lcsubstr[1])
 
-
-
-
-
-
-    copyrateDocument = open(outfile, 'a')
+    copyrateDocument = open(outpath, 'w')
     copyrateDocument.write(filename2 + '  ' + 'copyRate:'+ str(repeatRate) + '%  ' + "sequence similarity" + " " + str(100*(lcsubstr[1])/min(len(programSequence1), len(programSequence2))) + "%")
     if repeatRate >= 70.0:
         copyrateDocument.write('  *\n')
@@ -143,10 +141,7 @@ def find_lcsubstr(s1, s2):
                 if m[i+1][j+1]>mmax:
                     mmax=m[i+1][j+1]
                     p=i+1
-    return s1[p-mmax:p],mmax   #返回最长子串及其长度
-
-
-
+    return s1[p-mmax:p], mmax   #返回最长子串及其长度
 
 
 if __name__ == '__main__':

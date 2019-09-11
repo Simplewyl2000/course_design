@@ -1,0 +1,101 @@
+decl	1:0	1:16	0	char	mybuf2[800]
+func	2:0	19:0	0	int	main
+params	2:8	0:0	1	
+param	2:9	2:17	2	int	argc
+param	2:19	2:31	2	char *	argv[]
+stmnts	0:0	18:9	1	
+decl	4:1	4:13	2	HANDLE	hHeap
+decl	5:1	5:18	2	char	*buf1
+water	5:11	0:0	2	,
+decl	5:1	5:18	2	char	*buf2
+decl	6:1	6:6	2	int	i
+for	8:0	10:0	2	( int i = 0 ;i < 40;i ++)
+forinit	0:0	8:11	3	 int i = 0 ;
+decl	8:4	8:11	4	int	i
+op	8:9	0:0	4	=
+water	8:10	0:0	4	0
+cond	8:12	8:14	3	i < 40
+water	8:12	0:0	4	i
+op	8:13	0:0	4	<
+water	8:14	0:0	4	40
+forexpr	8:17	8:18	3	i ++
+water	8:17	0:0	4	i
+op	8:18	0:0	4	++
+stmts	8:21	10:0	3	
+water	8:21	0:0	4	{
+water	9:1	0:0	4	mybuf2
+op	9:7	0:0	4	[
+water	9:8	0:0	4	i
+op	9:9	0:0	4	]
+op	9:10	0:0	4	=
+water	9:13	0:0	4	a
+water	9:16	0:0	4	;
+water	10:0	0:0	4	}
+call	11:4	11:24	2	LoadLibrary
+arg	11:16	11:24	3	"user32"
+water	11:16	0:0	4	"user32"
+water	11:25	0:0	2	;
+water	12:1	0:0	2	hHeap
+op	12:6	0:0	2	=
+call	12:7	12:60	2	HeapCreate
+arg	12:18	12:42	3	HEAP_GENERATE_EXCEPTIONS
+water	12:18	0:0	4	HEAP_GENERATE_EXCEPTIONS
+arg	12:44	12:51	3	0x10000
+water	12:44	0:0	4	0
+water	12:45	0:0	4	x10000
+arg	12:53	12:60	3	0xfffff
+water	12:53	0:0	4	0
+water	12:54	0:0	4	xfffff
+water	12:61	0:0	2	;
+water	13:1	0:0	2	buf1
+op	13:6	0:0	2	=
+water	13:7	0:0	2	(
+water	13:8	0:0	2	char
+op	13:12	0:0	2	*
+water	13:13	0:0	2	)
+call	13:15	13:38	2	HeapAlloc
+arg	13:25	13:30	3	hHeap
+water	13:25	0:0	4	hHeap
+arg	13:32	13:33	3	0
+water	13:32	0:0	4	0
+arg	13:35	13:38	3	600
+water	13:35	0:0	4	600
+water	13:39	0:0	2	;
+call	14:1	14:19	2	strcpy
+arg	14:8	14:12	3	buf1
+water	14:8	0:0	4	buf1
+arg	14:13	14:19	3	mybuf2
+water	14:13	0:0	4	mybuf2
+water	14:20	0:0	2	;
+water	15:1	0:0	2	buf2
+op	15:6	0:0	2	=
+water	15:7	0:0	2	(
+water	15:8	0:0	2	char
+op	15:12	0:0	2	*
+water	15:13	0:0	2	)
+call	15:15	15:38	2	HeapAlloc
+arg	15:25	15:30	3	hHeap
+water	15:25	0:0	4	hHeap
+arg	15:32	15:33	3	0
+water	15:32	0:0	4	0
+arg	15:35	15:38	3	200
+water	15:35	0:0	4	200
+water	15:39	0:0	2	;
+call	16:1	16:24	2	HeapFree
+arg	16:10	16:15	3	hHeap
+water	16:10	0:0	4	hHeap
+arg	16:17	16:18	3	0
+water	16:17	0:0	4	0
+arg	16:20	16:24	3	buf1
+water	16:20	0:0	4	buf1
+water	16:25	0:0	2	;
+call	17:1	17:24	2	HeapFree
+arg	17:10	17:15	3	hHeap
+water	17:10	0:0	4	hHeap
+arg	17:17	17:18	3	0
+water	17:17	0:0	4	0
+arg	17:20	17:24	3	buf2
+water	17:20	0:0	4	buf2
+water	17:25	0:0	2	;
+return	18:1	18:9	2	0
+water	18:8	0:0	3	0

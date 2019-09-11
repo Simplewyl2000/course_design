@@ -1,1 +1,1 @@
-veri strcmp strcpy link strcat printf Delete strlen calc assert printf priintf printf main printf scanf veri printf printf calc main time srand random printf printf scanf printf printf printf StrToInt3 max max veri strcmp strcpy link strcat printf Delete strlen calc assert printf priintf printf main printf scanf veri printf printf calc 
+veri strcmp strcpy link strcat printf Delete strlen calc assert printf printf printf main printf scanf veri printf printf calc main printf scanf veri printf printf calc 
