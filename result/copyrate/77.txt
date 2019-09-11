@@ -1,0 +1,1 @@
+wholeScan.cpp  copyRate:11.111%  seq simi 7.421%

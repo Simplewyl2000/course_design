@@ -1,0 +1,1 @@
+TCPClientDlg.cpp  copyRate:6.667%  seq simi 6.873%

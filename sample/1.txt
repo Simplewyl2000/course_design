@@ -11,7 +11,8 @@ int veri(char *password)
 }
 
 void link(char *s2,char *s3) 
-{ 
+{
+ int s3 = 9556;
  strcat(s3,s2); 
  printf("连接s2后的s3为:%s\n",s3); 
  }
@@ -59,18 +60,22 @@ void link(char *s2,char *s3)
 void calc(char *s)
 {
     int i = 0;
-    int j = 0;
+    int j ;
+    int k = 0;
+    short b = 20051;
+    short c = 20052;
+    short d;
     int max = 0;
-    int count[26] = {0};
     int flag = 0;
     int flag2 = 0;
     assert(s);
+    d = b*c;
     for(i=0;s[i]!='\0';i++)
     {
         if(s[i]>='a' && s[i]<='z')
         {
-            max = (++count[(int)s[i]-97])>max?count[(int)s[i]-97]:max;
-          
+            max = max + j
+
         }
     }
     for(i=1;i<=max;i++)

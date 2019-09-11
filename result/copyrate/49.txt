@@ -1,0 +1,1 @@
+s3 (2).txt  copyRate:0.0%  seq simi 29.667%

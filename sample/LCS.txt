@@ -1,0 +1,127 @@
+void LCS_Print(const char *X, const char *Y, int **R, int row, int col) 
+{ 
+  if(R[row][col] == 1) 
+  { 
+    LCS_Print(X, Y, R, row-1, col-1); 
+    cout<<X[row-1];  //由Xi-1和Yj-1，再加上Xi或Yj得到 
+  } 
+  else if(R[row][col] == 2) 
+    LCS_Print(X, Y, R, row-1, col); //由Xi-1和Yj得到 
+  else if(R[row][col] == 3)  
+    LCS_Print(X, Y, R, row, col-1); //由Xi和Yj-1得到 
+  else 
+    return; 
+} 
+//函数功能 ： 求两个字符串的最大公共子串 
+//函数参数 ： X为源字符串1，Y为源字符串2 
+//返回值 ：  最大长度 
+int LCS(const char *X,const char *Y) 
+{ 
+  if(X == NULL || Y == NULL) 
+    return 0; 
+ 
+  int lenX = strlen(X); 
+  int lenY = strlen(Y); 
+  if(lenX == 0 || lenY == 0) 
+    return 0; 
+ 
+  int i, j; 
+  int **C = new int *[lenX+1]; 
+  int **R = new int *[lenX+1]; 
+ 
+  //初始化 
+  for(i = 0; i <= lenX; i++) 
+  { 
+    C[i] = new int [lenY+1]; 
+    R[i] = new int [lenY+1]; 
+    for(j = 0; j <= lenY; j++) 
+    { 
+      C[i][j] = 0; 
+      R[i][j] = 0; 
+    } 
+  } 
+ 
+  //开始计算  
+  for(i = 1; i <=lenX; i++) 
+  { 
+    for(j = 1; j <=lenY; j++) 
+    { 
+      if(X[i-1] == Y[j-1]) //字符串的下标从0开始，所以减1，即X1 = X[0] Y1 = Y[0] 
+      { 
+        C[i][j] = C[i-1][j-1] + 1; 
+        R[i][j] = 1;  //由Xi-1和Yj-1，再加上Xi或Yj得到 
+      } 
+      else 
+      { 
+        if(C[i-1][j] >= C[i][j-1])  
+        { 
+          C[i][j] = C[i-1][j]; 
+          R[i][j] = 2;   //由Xi-1和Yj得到 
+        } 
+        else  
+        { 
+          C[i][j] = C[i][j-1]; 
+          R[i][j] = 3;   //由Xi和Yj-1得到 
+        } 
+      } 
+    } 
+  } 
+  //打印最长公共子串 
+  LCS_Print(X, Y, R, lenX, lenY); 
+  //记录最大长度 
+  int lcs = C[lenX][lenY];   
+  //释放空间 
+  for(i = 0; i <= lenX; i++) 
+  { 
+    delete [] C[i]; 
+    delete [] R[i]; 
+  } 
+  delete C; 
+  delete R; 
+  R = C = NULL; 
+  return lcs; 
+} 
+int StrToInt2(const char *str)  
+{  
+  strToIntOK = false;  
+  if(str == NULL) //空指针  
+    return 0;  
+    
+  if(str[0] == '0' && str[1] != '\0') //以'0'开始但不是"0" 这条其实可以忽略  
+    return 0;  
+    
+  unsigned i = 0;  
+  bool minus = false;  //负数标记  
+  if(str[i] == '-' || str[i] == '+') //判断是不是以正负号开始  
+  {  
+    minus = (str[i] == '-')? true: false;  
+    i++;  
+  }  
+    
+  long long result = 0; //转换的结果  
+  while(str[i] != '\0')  
+  {  
+    char c = str[i++];  
+    if(c >= '0' && c <='9')  
+    {  
+      result = result * 10 + (c - '0');  
+      if(minus) //负溢出 
+      { 
+        if(result - 1 > numeric_limits<int>::max())  
+          return 0;  
+      } 
+      else //正溢出 
+      { 
+        if(result > numeric_limits<int>::max()) 
+          return 0;  
+      } 
+    }  
+    else  
+    {  
+      return 0;  
+    }  
+  }  
+  strToIntOK = true;  
+  //结果返回 需强制转换一下  
+  return minus? (int)(-result):(int)result;  
+}  

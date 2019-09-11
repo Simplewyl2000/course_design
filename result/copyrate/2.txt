@@ -1,0 +1,1 @@
+100.txt  copyRate:8.333%  seq simi 35.714%

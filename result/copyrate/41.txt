@@ -1,0 +1,1 @@
+LCS.txt  copyRate:35.714%  seq simi 6.873%

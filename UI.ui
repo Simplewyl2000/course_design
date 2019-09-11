@@ -17,13 +17,13 @@
    <property name="geometry">
     <rect>
      <x>5</x>
-     <y>5</y>
+     <y>4</y>
      <width>690</width>
-     <height>490</height>
+     <height>491</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
@@ -177,42 +177,13 @@
       <string>开始检测</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>110</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>单文件检测</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>110</y>
-       <width>72</width>
-       <height>15</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>批处理</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>260</y>
-       <width>660</width>
-       <height>200</height>
+       <x>0</x>
+       <y>110</y>
+       <width>681</width>
+       <height>191</height>
       </rect>
      </property>
      <property name="font">
@@ -226,14 +197,14 @@
      <widget class="QLabel" name="DES_CFG">
       <property name="geometry">
        <rect>
-        <x>480</x>
-        <y>60</y>
-        <width>180</width>
-        <height>140</height>
+        <x>469</x>
+        <y>29</y>
+        <width>191</width>
+        <height>161</height>
        </rect>
       </property>
       <property name="text">
-       <string>还未生成CFG</string>
+       <string>未生成CFG</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -242,10 +213,10 @@
      <widget class="QLabel" name="CFG_SORC">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>60</y>
+        <x>240</x>
+        <y>30</y>
         <width>180</width>
-        <height>140</height>
+        <height>151</height>
        </rect>
       </property>
       <property name="font">
@@ -254,7 +225,7 @@
        </font>
       </property>
       <property name="text">
-       <string>还未生成CFG</string>
+       <string>未生成CFG</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -263,8 +234,8 @@
      <widget class="QLabel" name="label_22">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>30</y>
+        <x>240</x>
+        <y>10</y>
         <width>72</width>
         <height>15</height>
        </rect>
@@ -281,8 +252,8 @@
      <widget class="QLabel" name="label_23">
       <property name="geometry">
        <rect>
-        <x>480</x>
-        <y>30</y>
+        <x>460</x>
+        <y>10</y>
         <width>72</width>
         <height>15</height>
        </rect>
@@ -301,7 +272,7 @@
        <rect>
         <x>20</x>
         <y>70</y>
-        <width>241</width>
+        <width>181</width>
         <height>20</height>
        </rect>
       </property>
@@ -327,7 +298,7 @@
      <widget class="QPushButton" name="CFGButton">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>30</x>
         <y>110</y>
         <width>161</width>
         <height>51</height>
@@ -341,50 +312,58 @@
     <widget class="QTextBrowser" name="copyRate">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>160</y>
-       <width>470</width>
-       <height>80</height>
+       <x>130</x>
+       <y>310</y>
+       <width>551</width>
+       <height>141</height>
       </rect>
      </property>
     </widget>
     <widget class="QLabel" name="label_27">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>190</y>
-       <width>72</width>
-       <height>20</height>
+       <x>10</x>
+       <y>310</y>
+       <width>81</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>结果：</string>
      </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QRadioButton" name="singleDoc">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>140</x>
        <y>90</y>
-       <width>16</width>
+       <width>115</width>
        <height>19</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string>单个文件检测</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_2">
+    <widget class="QRadioButton" name="batchProcess">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>300</x>
        <y>90</y>
-       <width>16</width>
+       <width>115</width>
        <height>19</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string>批处理</string>
      </property>
     </widget>
    </widget>
@@ -434,7 +413,7 @@
        <x>120</x>
        <y>130</y>
        <width>470</width>
-       <height>200</height>
+       <height>271</height>
       </rect>
      </property>
     </widget>

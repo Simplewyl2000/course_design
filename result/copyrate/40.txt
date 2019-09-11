@@ -1,0 +1,1 @@
+it1.txt  copyRate:21.429%  seq simi 22.898%

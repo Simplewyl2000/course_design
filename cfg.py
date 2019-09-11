@@ -1,12 +1,7 @@
-import readAnalysis
+import analysis
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
-
-
-functionList = []
-functionBodyList = []
-colors = ["blue","red","green","black","pink","purple","orange","yellow"]
 
 
 class Function:
@@ -52,7 +47,7 @@ class Function:
         return self.isFunctionBody
 
     def get_whereFunctionStarts(self):
-        return self.__whereFunctionStarts
+        return self.__functionLine
 
     def get_whereFunctionEnds(self):
         return self.__whereFunctionEnds
@@ -82,87 +77,46 @@ class Function:
     def set_functionLine(self,a):
         self.__functionLine = a
 
-
-
     def append_childFunction(self,fun):
          self.__containFunctions.append(fun)
 
 
-def find_sub_list(sl, l, preresult, isBody,id):
-    global functionList
-    functionNameInputFile = open("midFile\\functionName" + str(id) + ".txt")
-    functionLineInputFile = open("midFile\\functionLine" + str(id) + ".txt")
-    functionNameInput = functionNameInputFile.read()
-    functionLineInput = functionLineInputFile.read()
-    functionNameList = functionNameInput.split(" ")
-    functionLineList = functionLineInput.split(" ")
-    functionNameList.pop()
-    functionLineList.pop()
 
-    functionNameInputFile.close()
-    functionnnname =""
+def find_functions(filename):
 
-    idForFunction = 0
-    results=preresult
-    sll=len(sl)
-    if isBody:
-        for ind in (i for i, e in enumerate(l) if e==sl[0]):
-            if l[ind:ind+sll] == sl:
-                functiontem = Function()
-                functiontem.set_isFunctionBody(isBody)
-                functiontem.set_whereFunctionStarts(ind)
-                for i in functionList:
-                    if i.get_whereFunctionStarts() == ind+1:
-                        functiontem.set_functionID(i.get_functionID())
-                        functiontem.set_functionName(functionNameList[i.get_functionID() - 1])
-                        functiontem.set_functionLine(int(functionLineList[i.get_functionID() - 1]))
+    filepath = "sample\\" + filename
+    functionNameList = []
+    functionLineList = []
+    functionBodyNameList = []
+    functionBodyStartList = []
+    functionBodyEndList =[]
 
-                results.append(functiontem)
-    else:
-        for ind in (i for i, e in enumerate(l) if e==sl[0]):
-            if l[ind:ind+sll] == sl:
+    functionNameList,functionLineList,functionBodyNameList,functionBodyStartList,functionBodyEndList = analysis.processProgram(filepath)
 
-                idForFunction = idForFunction + 1
-                if idForFunction-1 == len(functionNameList):
-                    return results
-                functiontem = Function()
-                functiontem.set_functionID(idForFunction)
-                functiontem.set_functionName(functionNameList[idForFunction - 1])
-                functiontem.set_functionLine(int(functionLineList[idForFunction-1]))
-                functiontem.set_isFunctionBody(isBody)
-                functiontem.set_whereFunctionStarts(ind)
-                results.append(functiontem)
-    return results
-
-
-def find_functions(tokenList,id):
-    global functionList
-    global functionBodyList
-    del functionList
     functionList = []
-    del functionBodyList
     functionBodyList = []
 
-    functionList = find_sub_list(["ID", "("], tokenList, functionList, False, id)
-    functionBodyList = find_sub_list(["INT", "ID", "("], tokenList, functionBodyList, True, id)
-    functionBodyList = find_sub_list(["CHAR", "ID", "("], tokenList, functionBodyList, True, id)
-    functionBodyList = find_sub_list(["VOID", "ID", "("], tokenList, functionBodyList, True, id)
-    for i in functionBodyList:
-        i.find_functionEnd(tokenList, i.get_whereFunctionStarts())
+    for i in range(len(functionNameList)):
+        functem = Function()
+        functem.set_functionName(functionNameList[i])
+        functem.set_functionLine(int(functionLineList[i]))
+        functem.set_functionID(i)
+        functem.set_isFunctionBody(False)
+        functionList.append(functem)
+
+    for i in range(len(functionBodyNameList)):
+        functem = Function()
+        functem.set_isFunctionBody(True)
+        functem.set_whereFunctionEnds(int(functionBodyEndList[i]))
+        functem.set_functionLine(int(functionBodyStartList[i]))
+        functem.set_functionName(functionBodyNameList[i])
+        functionBodyList.append(functem)
 
     return functionList, functionBodyList
 
 
-def martrix_build(file, id):
-    global functionBodyList
-    global functionList
-    del functionList
-    functionList = []
-    del functionBodyList
-    functionBodyList = []
-
-    tokenList = readAnalysis.get_tokenList(file, id)
-    functionList, functionBodyList = find_functions(tokenList, id)
+def martrix_build(file):
+    functionList, functionBodyList = find_functions(file)
     functionSet, functionDic = function_set(functionList)
     a = np.zeros([len(functionBodyList), len(functionSet)], dtype=np.int)
     x = -1
@@ -171,12 +125,10 @@ def martrix_build(file, id):
     for i in functionDic:
         nodes.append(functionDic[i])
 
-
     for i in functionBodyList:
         x = x + 1
         for j in functionList:
             if i.get_whereFunctionStarts() < j.get_whereFunctionStarts() < i.get_whereFunctionEnds():
-                if i.get_whereFunctionStarts() + 1 != j.get_whereFunctionStarts():
                     a[x, functionDic[j.get_functionName()]] = a[x, functionDic[j.get_functionName()]] + 1
                     edges.append((functionDic[i.get_functionName()], functionDic[j.get_functionName()]))
 
@@ -201,6 +153,7 @@ def function_set(funclist):
         functionset.append(i.get_functionName())
     functionset = set(functionset)
     functionset = list(functionset)
+    functionset.sort()
     for i in functionset:
         functiondic[i] = funcNewId
         funcNewId = funcNewId + 1
@@ -209,13 +162,7 @@ def function_set(funclist):
 
 
 if __name__ == "__main__":
-    tokenList = readAnalysis.get_tokenList("5.txt", 10)
-    find_functions(tokenList, 10)
-    functionSet, functionDic = function_set(functionList)
-    print(functionDic)
-    print(functionSet)
-
-
+   print(martrix_build("100.txt"))
 
 
 

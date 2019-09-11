@@ -1,0 +1,1 @@
+traceser.cpp  copyRate:0.0%  seq simi 5.474%

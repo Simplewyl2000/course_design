@@ -1,0 +1,1 @@
+DES6.cpp  copyRate:23.077%  seq simi 9.002%

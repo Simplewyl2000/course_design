@@ -1,27 +1,17 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
-
 import re
 
 
-'''
-words_count函数用于统计代码中出现的各类符号的次数
-实现了对宏定义进行替换的功能
-
-'''
-
-
 def words_conut(programLine, base, preDefine, sequence):
-    programLine = re.sub('\"([^\"]*)\"', ' ', programLine, 0, 0)              # 去双引号
-    programLine = re.sub('/\*(?<=/\*).+?(?=\*/)\*/', ' ', programLine, 0, 0)  # 去注释/**/
-    programLine = re.sub('//.*', ' ', programLine, 0, 0)                      # 去注释//
+    programLine = re.sub('\"([^\"]*)\"', ' ', programLine, 0, 0)
+    programLine = re.sub('/\*(?<=/\*).+?(?=\*/)\*/', ' ', programLine, 0, 0)
+    programLine = re.sub('//.*', ' ', programLine, 0, 0)
     programLine = programLine.replace('"', ' ')
     programLine = programLine.replace(')', ' ')
     programLine = programLine.replace('(', ' ')
     programLine = programLine.replace(',', ' ')
     programLine = programLine.replace(':', ' ')
     programLine = programLine.replace('}', ' ')
-    programLine = programLine.replace('{', ' ')                               # 对统计产生影响的特殊符号
+    programLine = programLine.replace('{', ' ')
     li = programLine.split()  # 以空格划分
     if len(li) >= 3 and (li[0] == '#define' or li[0] == '#DEFINE'):
         preDefine.append([li[2], li[1]])
@@ -33,7 +23,7 @@ def words_conut(programLine, base, preDefine, sequence):
         for keyWord in base:
             if keyWord[0] == li[1]:
                 keyWord[1] = keyWord[1] + 1
-        preDefine.append([li[1], li[2]])                                 #此时对已经有了对于变量进行替换的list，可以进行宏替换提高准确率
+        preDefine.append([li[1], li[2]])
     
     for word1 in li:
         flag = 0
@@ -122,7 +112,8 @@ def copyRate_count(filename1, filename2, outfile):
     print(lcsubstr[1])
 
     copyrateDocument = open(outpath, 'w')
-    copyrateDocument.write(filename2 + '  ' + 'copyRate:'+ str(repeatRate) + '%  ' + "sequence similarity" + " " + str(100*(lcsubstr[1])/min(len(programSequence1), len(programSequence2))) + "%")
+    lsres = round((100*(lcsubstr[1])/min(len(programSequence1), len(programSequence2))),3)
+    copyrateDocument.write(filename2 + '  ' + 'copyRate:'+ str(round(repeatRate,3)) + '%  ' + "seq simi" + " " + str(lsres) + "%")
     if repeatRate >= 70.0:
         copyrateDocument.write('  *\n')
     else:
@@ -131,9 +122,9 @@ def copyRate_count(filename1, filename2, outfile):
 
 
 def find_lcsubstr(s1, s2):
-    m=[[0 for i in range(len(s2)+1)]  for j in range(len(s1)+1)]  #生成0矩阵，为方便后续计算，比字符串长度多了一列
-    mmax=0   #最长匹配的长度
-    p=0  #最长匹配对应在s1中的最后一位
+    m=[[0 for i in range(len(s2)+1)]  for j in range(len(s1)+1)]
+    mmax=0
+    p=0
     for i in range(len(s1)):
         for j in range(len(s2)):
             if s1[i]==s2[j]:
@@ -141,7 +132,7 @@ def find_lcsubstr(s1, s2):
                 if m[i+1][j+1]>mmax:
                     mmax=m[i+1][j+1]
                     p=i+1
-    return s1[p-mmax:p], mmax   #返回最长子串及其长度
+    return s1[p-mmax:p], mmax
 
 
 if __name__ == '__main__':

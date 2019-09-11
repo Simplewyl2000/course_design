@@ -3,9 +3,9 @@ import cfg
 import re
 
 
-def findStrcpy(fileinput, tokenList, id):
+def findStrcpy(fileinput, filename):
     program = fileinput
-    functionList, functionBodyList = cfg.find_functions(tokenList, id)
+    functionList, functionBodyList = cfg.find_functions(filename)
     firstFunc = functionBodyList[0].get_whereFunctionStarts()
     glvar = findGlobal(fileinput, firstFunc)
 
@@ -69,6 +69,22 @@ def findTheSize(file, arg, glvar, begin, ends):
             size = i[1]
             return int(size)
     i = 0
+
+    for i in range(begin):
+        programLine = file.readline()
+
+    for i in range(ends - begin - 1):
+        programLine = file.readline()
+        if re.search(r'%s\[\d+\]' % (arg), programLine) != None:
+            flag = 0
+            size = programLine[programLine.index("[") + 1:programLine.index("]")]
+
+    file.seek(0)
+
+
+
+
+
     for programLine in file:
         i = i+1
         a= re.search(r'%s[\s\S]*=[\s\S]*\(*[a-zA-Z]*\)*[\s\S]*(malloc|HeapAlloc)\([\s\S]*[a-zA-Z]*[\s\S]*,[\s\S]*\d*[\s\S]*,[\s\S]*\d*[\s\S]*\)' % (arg), programLine)
@@ -99,13 +115,13 @@ def findGlobal(fileinput,firstFunc):
     return glvar
 
 
-def detectHeapOverflow(filename, id):
+def detectHeapOverflow(filename):
     filepath = "sample\\" + filename
-    fileinput = open(filepath, "r")
-    tokenList = readAnalysis.get_tokenList(filename, id)
-    warnings = findStrcpy(fileinput, tokenList, id)
+    fileinput = open(filepath, "r", encoding="utf-8")
+
+    warnings = findStrcpy(fileinput, filename)
     return warnings
 
 
 if __name__ == "__main__":
-    print(detectHeapOverflow("12.txt", 1))
+    print(detectHeapOverflow("s4.txt"))

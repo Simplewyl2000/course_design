@@ -3,10 +3,10 @@ import cfg
 import re
 
 
-def findPrintf(fileinput,tokenList,id):
+def findPrintf(fileinput,filename):
 
     program = fileinput
-    functionList, functionBodyList = cfg.find_functions(tokenList, id)
+    functionList, functionBodyList = cfg.find_functions(filename)
     lineStart = 0
     linePrintf = 0
     argvindex = 0
@@ -36,7 +36,7 @@ def findPrintf(fileinput,tokenList,id):
                     start = i
                     break
 
-            for i in range(start, len(programLine)):
+            for i in range(len(programLine)):
                 if programLine[i] == '"':
                     end = i
 
@@ -54,7 +54,7 @@ def findPrintf(fileinput,tokenList,id):
                 k = formatString[i]
                 if formatString[i] == '%' and formatString[i - 1] != "\\":
                     if formatString[i + 1] == 'd' or (formatString[i+1].isdigit() and formatString[i+2] == 'd'):
-                        if argvindex > len(args):
+                        if argvindex >= len(args):
                             warnings.append("Not safe, the number of args of printf in line %d is not matched！" %linePrintf)
                             isSafe = False
                         else:
@@ -71,7 +71,7 @@ def findPrintf(fileinput,tokenList,id):
                                 isSafe = False
                         argvindex = argvindex + 1
                     elif formatString[i + 1] == 's':
-                        if argvindex > len(args):
+                        if argvindex >= len(args):
                             warnings.append("Not safe, the number of args of printf in line %d is not matched！" %linePrintf)
                             isSafe = False
                         else:
@@ -88,7 +88,7 @@ def findPrintf(fileinput,tokenList,id):
                                 isSafe = False
                         argvindex = argvindex + 1
                     elif formatString[i + 1] == 'c':
-                        if argvindex > len(args):
+                        if argvindex >= len(args):
                             warnings.append("Not safe, the number of args of printf in line %d is not matched！" %linePrintf)
                             isSafe = False
                         else:
@@ -134,6 +134,7 @@ def matchType(file, arg, begin, end):
 
     for i in range(end - begin - 1):
         programLine = file.readline()
+
         if re.search(r'[(int)(char)][\s\S]*%s' % (arg), programLine) != None:
             flag = 0
             start, end = re.search(r'[(int)(char)][\s\S]*%s' % (arg), programLine).span()
@@ -146,21 +147,24 @@ def matchType(file, arg, begin, end):
                     return type
 
             return type
+        else:
+            continue
 
     if flag:
         return "not define the %s in line %d, it is not safe" % (arg, end)
 
-def detectPrintf(filename,id):
+def detectPrintf(filename):
     filepath = "sample\\" + filename
     f = open(filepath, "r", encoding="utf-8")
-    tokens = readAnalysis.get_tokenList("1.txt", 1)
-    warnings = findPrintf(f, tokens, 1)
+
+    warnings = findPrintf(f, filename)
     return warnings
 
 if __name__ == "__main__":
-    f = open("sample\\1.txt", "r", encoding="utf-8")
-    tokenList = readAnalysis.get_tokenList("1.txt", 1)
-    warnings = findPrintf(f, tokenList, 1)
+
+    warnings = detectPrintf("p1.txt")
+
+
 
     for i in warnings:
         print(i)

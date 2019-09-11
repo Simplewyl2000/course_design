@@ -1,0 +1,1 @@
+int_wid2.txt  copyRate:0.0%  seq simi 34.364%

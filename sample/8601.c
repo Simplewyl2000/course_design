@@ -1,0 +1,103 @@
+#include<stdlib.h>
+#include<stdio.h>
+int gaygayfan(const void *j,const void *i);
+void p(int b[],char n[]);
+
+int main(void)
+{
+static char n[]={"2","3","4","5","6","7","8","9","T","J","Q","K","A"};
+int a[53],b1[13],b2[13],b3[13],b4[13];
+int b11=0,b22=0,b33=0,b44=0,t=1,m,flag,i;
+while(t<=52) /*控制发52张牌*/
+{
+m=rand()%52; /*产生0到51之间的随机数*/
+for(flag=1,i=1;i<=t&&flag;i++)/*查找新产生的随机数是否已经存在*/
+if(m==a[i]) flag=0; /*flag=1:产生的是新的随机数flag=0:新产生的随机数已经存在*/
+
+if(flag)
+{
+a[t++]=m; /*如果产生了新的随机数，则存入数组*/
+if(t%4==0) b1[b11++]=a[t-1]; /*根据t的模值，判断当前*/
+else if(t%4==1) b2[b22++]=a[t-1]; /*的牌应存入哪个数组中*/
+else if(t%4==2) b3[b33++]=a[t-1];
+else if(t%4==3) b4[b44++]=a[t-1];
+}
+}
+
+qsort(b1,13,sizeof(int),gaygayfan); /*将每个人的牌进行排序*/
+qsort(b2,13,sizeof(int),gaygayfan);
+qsort(b3,13,sizeof(int),gaygayfan);
+qsort(b4,13,sizeof(int),gaygayfan);
+p(b1,n); p(b2,n); p(b3,n); p(b4,n); /*分别打印每个人的牌*/
+
+return 0;
+}
+
+void p(int b[],char n[])
+{
+int i;
+printf(" \006 "); /*打印黑桃标记*/
+for(i=0;i<13;i++) /*将数组中的值转换为相应的花色*/
+if(b[i]/13==0) printf("%c ",n[b[i]%13]); /*该花色对应的牌*/
+printf(" \003 "); /*打印红桃标记*/
+
+for(i=0;i<13;i++)
+if((b[i]/13)==1) printf("%c ",n[b[i]%13]);
+printf(" \004 "); /*打印方块标记*/
+for(i=0;i<13;i++)
+if(b[i]/13==2) printf("%c ",n[b[i]%13]);
+printf(" \005 "); /*打印梅花标记*/
+for(i=0;i<13;i++)
+if(b[i]/13==3||b[i]/13==4) printf("%c ",n[b[i]%13]);
+printf(" ");
+}
+
+int gaygayfan(const void *j,const void *i) /*qsort调用的排序函数*/
+{
+return(*(int*)i-*(int*)j);
+}
+
+int StrToInt2(const char *str)  
+{  
+  strToIntOK = false;  
+  if(str == NULL) //空指针  
+    return 0;  
+    
+  if(str[0] == '0' && str[1] != '\0') //以'0'开始但不是"0" 这条其实可以忽略  
+    return 0;  
+    
+  unsigned i = 0;  
+  bool minus = false;  //负数标记  
+  if(str[i] == '-' || str[i] == '+') //判断是不是以正负号开始  
+  {  
+    minus = (str[i] == '-')? true: false;  
+    i++;  
+  }  
+    
+  long long result = 0; //转换的结果  
+  while(str[i] != '\0')  
+  {  
+    char c = str[i++];  
+    if(c >= '0' && c <='9')  
+    {  
+      result = result * 10 + (c - '0');  
+      if(minus) //负溢出 
+      { 
+        if(result - 1 > numeric_limits<int>::max())  
+          return 0;  
+      } 
+      else //正溢出 
+      { 
+        if(result > numeric_limits<int>::max()) 
+          return 0;  
+      } 
+    }  
+    else  
+    {  
+      return 0;  
+    }  
+  }  
+  strToIntOK = true;  
+  //结果返回 需强制转换一下  
+  return minus? (int)(-result):(int)result;  
+}  

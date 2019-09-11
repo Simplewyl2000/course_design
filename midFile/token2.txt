@@ -1,1 +1,1 @@
-ID < ID ID ID > INT ID ( ) { INT ID = DIGIT ; CHAR ID = CHARACTER ; ID = ID ; CHAR ID [ DIGIT ] ; WHILE ( DIGIT ) { ID ( @-2 @-2 @-2 ) ; ID ( STRING , ID ) ; ID = ID ( ID ) ; IF ( ID ) { ID ( @-2 @-2 @-2 @-2 ) ; } ELSE { ID ( @-2 ! @-2 ) ; ID ( ID ) ; BREAK ; } } } 
+INT ID ( ) { CHAR ID [ DIGIT ] = STRING ; CHAR ID [ DIGIT ] = STRING ; INT ID ; UNSIGNED INT ID ; ID = DIGIT ; ID = - DIGIT ; ID = ID ; ID ( ID , ID , ID ) ; ID ( ID , STRING ) ; RETURN DIGIT ; } 

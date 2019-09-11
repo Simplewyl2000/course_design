@@ -1,1 +1,0 @@
-main fopen srand time rand fprintf printf fclose StrToInt2 max max StrToInt3 max max 

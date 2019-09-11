@@ -1,0 +1,1 @@
+member.cpp  copyRate:16.667%  seq simi 5.474%

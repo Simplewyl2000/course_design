@@ -1,0 +1,1 @@
+10.txt  copyRate:9.091%  seq simi 97.173%

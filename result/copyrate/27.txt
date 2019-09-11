@@ -1,0 +1,1 @@
+format2.c  copyRate:27.273%  seq simi 8.895%

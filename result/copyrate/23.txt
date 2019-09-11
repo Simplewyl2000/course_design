@@ -1,0 +1,1 @@
+DES5.cpp  copyRate:18.182%  seq simi 6.873%

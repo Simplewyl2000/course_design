@@ -1,0 +1,1 @@
+1.txt  copyRate:100.0%  seq simi 100.0%  *

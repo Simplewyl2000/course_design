@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+int main()
+{
+    HRESULT hr;
+
+
+   int c = 110;
+   char d = "#"
+   char a[8]="I am a ";
+   char b[9]="kkajshd";
+   printf("ha%d, %s",c,d);
+
+
+    LPSTREAM pStream = NULL;
+    ULARGE_INTEGER ul;
+    LARGE_INTEGER li;
+
+    CoInitialize(NULL);
+
+    hr = CreateStreamOnHGlobal(NULL, TRUE, &pStream);
+
+    RealIStreamWrite = pStream->lpVtbl->Write;
+
+    ul.QuadPart = 512;
+    hr = pStream->lpVtbl->SetSize(pStream, ul);
+    li.QuadPart = 0;
+    hr = pStream->lpVtbl->Seek(pStream, li, STREAM_SEEK_SET, NULL);
+
+    printf("commem: Calling Write w/o before attach.\n");
+
+    li.QuadPart = 0;
+    hr = pStream->lpVtbl->Write(pStream, &ul, sizeof(ul), NULL);
+
+    DetourTransactionBegin();
+    DetourUpdateThread(GetCurrentThread());
+    DetourAttach(&(PVOID&)RealIStreamWrite, MineIStreamWrite);
+    DetourTransactionCommit();
+
+    printf("commem: Calling Write w/o after attach.\n");
+
+    li.QuadPart = 1;
+    hr = pStream->lpVtbl->Write(pStream, &li, sizeof(li), NULL);
+
+    DetourTransactionBegin();
+    DetourUpdateThread(GetCurrentThread());
+    DetourDetach(&(PVOID&)RealIStreamWrite, MineIStreamWrite);
+    DetourTransactionCommit();
+
+    printf("commem: Calling Write w/o after detach.\n");
+
+    li.QuadPart = 2;
+    hr = pStream->lpVtbl->Write(pStream, &li, sizeof(li), NULL);
+
+    hr = pStream->lpVtbl->Release(pStream);
+    pStream = NULL;
+
+    CoUninitialize();
+
+    return 0;
+}
+
+

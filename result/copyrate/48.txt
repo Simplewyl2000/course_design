@@ -1,0 +1,1 @@
+p1.txt  copyRate:8.333%  seq simi 7.16%

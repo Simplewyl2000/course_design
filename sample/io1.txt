@@ -1,0 +1,121 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+//  Detours Test Program (dumpi.cpp of dumpi.exe)
+//
+//  Microsoft Research Detours Package, Version 2.1.
+//
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <shellapi.h>
+#include <detours.h>
+
+////////////////////////////////////////////////////////////// Error Messages.
+//
+VOID AssertMessage(PCSTR szMsg, PCSTR szFile, DWORD nLine)
+{
+    printf("ASSERT(%s) failed in %s, line %d.", szMsg, szFile, nLine);
+}
+
+#define ASSERT(x)   \
+do { if (!(x)) { AssertMessage(#x, __FILE__, __LINE__); DebugBreak(); }} while (0)
+    ;
+
+//////////////////////////////////////////////////////////////////////////////
+//
+static BOOL s_fSubs = FALSE;
+
+//////////////////////////////////////////////////////////////////////////////
+//
+#include<stdio.h>
+void vr6174(int);
+void parse_sort(int num,int *each);
+void max_min(int *each,int *max,int *min);
+void parse_sort(int num,int *each);
+int count=0;
+int main(){
+   char a[8]="I am a ";
+   char b[9]="kkajshd";
+   int a = 10;
+   int b = 200000000000000;
+   int c;
+   c = a+b;
+   return 0;
+}
+
+void vr6174(int num)
+{
+int each[4],max,min;
+if(num!=6174&&num) /*若不等于74且不等于0则进行卡布列克运算*/
+{
+parse_sort(num,each); /*将整数分解，数字存入each数组中*/
+max_min(each,&max,&min); /*求数字组成的最大值和最小值*/ 
+num=max-min; /*求最大值和最小值的差*/
+printf("[%d]: %d-%d=%d ",++count,max,min,num); /*输出该步计算过程*/
+vr6174(num); /*递归调用自身继续进行卡布列克运算*/
+}
+}
+void parse_sort(int num,int *each)
+{
+int i,*j,*k,temp;
+for(i=0;i<=4;i++) /*将NUM分解为数字*/
+{
+j=each+3-i;
+
+num/=10;
+}
+for(i=0;i<3;i++) /*对各保数字从小到大进行排序*/
+for(j=each,k=each+1;j<each+3-i;j++,k++)
+if(*j>*k) { temp=*j;*j=*k;*k=temp;}
+return;
+}
+void max_min(int *each,int *max,int *min) /*将分解的数字还原为最大整数和最小整数*/
+{
+int *i;
+*min=0;
+for(i=each;i<each+4;i++) /*还原为最小的整数*/
+*min=*min*10+*i;
+*max=0;
+for(i=each+3;i>=each;i--) /*还原为最大的整数*/
+*max=*max*10+*i;
+return;
+}
+void vr321(int num)
+{
+int each[4],max,min;
+if(num!=6174&&num) /*若不等于74且不等于0则进行卡布列克运算*/
+{
+parse_sort(num,each); /*将整数分解，数字存入each数组中*/
+max_min(each,&max,&min); /*求数字组成的最大值和最小值*/ 
+num=max-min; /*求最大值和最小值的差*/
+printf("[%d]: %d-%d=%d ",++count,max,min,num); /*输出该步计算过程*/
+vr6174(num); /*递归调用自身继续进行卡布列克运算*/
+}
+}
+void parse_soret(int num,int *each)
+{
+int i,*j,*k,temp;
+for(i=0;i<=4;i++) /*将NUM分解为数字*/
+{
+j=each+3-i;
+
+num/=10;
+}
+for(i=0;i<3;i++) /*对各保数字从小到大进行排序*/
+for(j=each,k=each+1;j<each+3-i;j++,k++)
+if(*j>*k) { temp=*j;*j=*k;*k=temp;}
+return;
+}
+void max_fag(int *each,int *max,int *min) /*将分解的数字还原为最大整数和最小整数*/
+{
+int *i;
+*min=0;
+for(i=each;i<each+4;i++) /*还原为最小的整数*/
+*min=*min*10+*i;
+*max=0;
+for(i=each+3;i>=each;i--) /*还原为最大的整数*/
+*max=*max*10+*i;
+return;
+}

@@ -1,0 +1,1 @@
+main4.cpp  copyRate:6.25%  seq simi 6.265%

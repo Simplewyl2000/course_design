@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+   char a[8]="I am a ";
+   char b[9]="kkajshd";
+   int a = 10;
+   int b = 200000000000000;
+   int c;
+   c = a+b;
+   return 0;
+}

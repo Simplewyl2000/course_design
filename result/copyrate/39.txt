@@ -1,0 +1,1 @@
+is1.txt  copyRate:37.5%  seq simi 6.265%

@@ -8,9 +8,9 @@ sensitiveFunctions = ["memcpy", "memncpy", "strcat", "strncat", "sprintf", "vspr
                       "getc", "read", "sscanf", "fscanf", "vfscanf", "vscanf", "vsscanf"]
 
 
-def findMemcpy(filename, fileinput, tokenList, id):
+def findMemcpy(fileinput, filename):
     program = fileinput
-    functionList, functionBodyList = cfg.find_functions(tokenList, id)
+    functionList, functionBodyList = cfg.find_functions(filename)
     lineStart = 0
     lineMemcpy = 0
     programLine = ""
@@ -49,13 +49,13 @@ def findMemcpy(filename, fileinput, tokenList, id):
 
 
 
-def detectIntegerSign(filename, id):
+def detectIntegerSign(filename):
     filepath = "sample\\" + filename
     fileinput = open(filepath, "r", encoding="utf-8")
-    tokenList = readAnalysis.get_tokenList(filename, id)
-    warnings = findMemcpy(filename, fileinput, tokenList, id) + integerOverflowDetect.detectIntegerOverflow(filename)
+
+    warnings = findMemcpy(fileinput, filename) + integerOverflowDetect.detectIntegerOverflow(filename)
     return warnings
 
 
 if __name__ == "__main__":
-    print(detectIntegerSign("11.txt", 11))
+    print(detectIntegerSign("is1.txt"))

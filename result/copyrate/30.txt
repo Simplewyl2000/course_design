@@ -1,0 +1,1 @@
+heap.txt  copyRate:9.091%  seq simi 17.923%

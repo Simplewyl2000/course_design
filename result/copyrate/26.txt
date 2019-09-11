@@ -1,0 +1,1 @@
+format.txt  copyRate:0.0%  seq simi 47.368%

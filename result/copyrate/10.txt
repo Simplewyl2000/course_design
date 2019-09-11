@@ -1,0 +1,1 @@
+2.txt  copyRate:54.545%  seq simi 59.058%

@@ -1,0 +1,73 @@
+#include <stdio.h>
+//http://www.kuqin.com/tiku/20080424/7614.html
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+int main()
+{
+	int valid=0;
+	char isChecked = 'c';
+	isChecked = valid;
+	char password[1024];
+	while(1)
+	{
+		printf("password?");
+		scanf("%s",password);
+		valid=veri(password);
+		if(valid)
+		{
+			printf("incorrect??");
+		}
+		else
+		{
+			printf("correct!");
+            calc(password);
+			break;
+		}
+	}
+}
+} 
+int StrToInt3(const char *str)  
+{  
+  strToIntOK = false;  
+  if(str == NULL) //空指针  
+    return 0;  
+    
+  if(str[0] == '0' && str[1] != '\0') //以'0'开始但不是"0" 这条其实可以忽略  
+    return 0;  
+    
+  unsigned i = 0;  
+  bool minus = false;  //负数标记  
+  if(str[i] == '-' || str[i] == '+') //判断是不是以正负号开始  
+  {  
+    minus = (str[i] == '-')? true: false;  
+    i++;  
+  }  
+    
+  long long result = 0; //转换的结果  
+  while(str[i] != '\0')  
+  {  
+    char c = str[i++];  
+    if(c >= '0' && c <='9')  
+    {  
+      result = result * 10 + (c - '0');  
+      if(minus) //负溢出 
+      { 
+        if(result - 1 > numeric_limits<int>::max())  
+          return 0;  
+      } 
+      else //正溢出 
+      { 
+        if(result > numeric_limits<int>::max()) 
+          return 0;  
+      } 
+    }  
+    else  
+    {  
+      return 0;  
+    }  
+  }  
+  strToIntOK = true;  
+  //结果返回 需强制转换一下  
+  return minus? (int)(-result):(int)result;  
+} 

@@ -1,0 +1,1 @@
+s4.txt  copyRate:0.0%  seq simi 24.791%

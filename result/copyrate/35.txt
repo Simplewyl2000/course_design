@@ -1,0 +1,1 @@
+Ini01.cpp  copyRate:23.077%  seq simi 10.341%

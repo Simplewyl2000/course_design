@@ -1,0 +1,1 @@
+sample1.txt  copyRate:7.143%  seq simi 11.996%
