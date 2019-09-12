@@ -5,63 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c81567a-25a3-4e80-ad70-93c26348b084" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sample/100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testeval.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cfg.py" beforeDir="false" afterPath="$PROJECT_DIR$/cfg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cfg_compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/cfg_compare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/copyRate.py" beforeDir="false" afterPath="$PROJECT_DIR$/copyRate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heapDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/heapDetect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integerOperate.py" beforeDir="false" afterPath="$PROJECT_DIR$/integerOperate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integerOverflowDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/integerOverflowDetect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integerSignDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/integerSignDetect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionLine1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionLine2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionLine8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionName1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/functionName2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/functionName8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/shuchu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/signDetect.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/signDetect.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/token1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/token2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/token8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/midFile/widthDetect.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/widthDetect.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printfTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/printfTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/1.txt.png" beforeDir="false" afterPath="$PROJECT_DIR$/result/cfg/1.txt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/10.txt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/11.txt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midFile/haha.txt" beforeDir="false" afterPath="$PROJECT_DIR$/midFile/haha.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result/cfg/2.txt.png" beforeDir="false" afterPath="$PROJECT_DIR$/result/cfg/2.txt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/4.txt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/5.txt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/6.txt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/8.txt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cfg/9.txt.png" beforeDir="false" afterPath="$PROJECT_DIR$/result/cfg/9.txt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/copyrate/copyResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/copyrate/0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result/copyrate/0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/s4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/s4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stackOverflowTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/stackOverflowTools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/h4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/h4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/is1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/is1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/p1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/p1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/z1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/z1.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,41 +24,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample/13.txt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="950">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample/12.txt">
+        <entry file="file://$PROJECT_DIR$/sample/9.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="3914">
+              <caret line="291" column="23" lean-forward="true" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample/11.txt">
+        <entry file="file://$PROJECT_DIR$/cfg_compare.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="23" selection-start-line="3" selection-start-column="3" selection-end-line="4" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/integerSignDetect.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="280">
+              <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="58" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample/1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -113,8 +66,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/is1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="304">
+              <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample/z1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -123,25 +85,16 @@
         <entry file="file://$PROJECT_DIR$/sample/p1.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/printfTest.py">
+        <entry file="file://$PROJECT_DIR$/stackOverflowTools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-981">
-              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+            <state relative-caret-position="1900">
+              <caret line="100" column="67" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="67" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -150,22 +103,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/integerOperate.py">
+        <entry file="file://$PROJECT_DIR$/sample/h4.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-342">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/integerOverflowDetect.py">
+        <entry file="file://$PROJECT_DIR$/sample/io1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="203" column="42" selection-start-line="203" selection-start-column="42" selection-end-line="203" selection-end-column="42" />
+            <state relative-caret-position="38">
+              <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -246,12 +196,9 @@
         <option value="$PROJECT_DIR$/sample/11.txt" />
         <option value="$PROJECT_DIR$/testCode.py" />
         <option value="$PROJECT_DIR$/sample/100.txt" />
-        <option value="$PROJECT_DIR$/cfg_compare.py" />
         <option value="$PROJECT_DIR$/cfg.py" />
         <option value="$PROJECT_DIR$/analysis.py" />
-        <option value="$PROJECT_DIR$/sample/1.txt" />
         <option value="$PROJECT_DIR$/sample/7.txt" />
-        <option value="$PROJECT_DIR$/sample/z1.txt" />
         <option value="$PROJECT_DIR$/stackOverflowTools.py" />
         <option value="$PROJECT_DIR$/sample/6.txt" />
         <option value="$PROJECT_DIR$/heapDetect.py" />
@@ -263,15 +210,19 @@
         <option value="$PROJECT_DIR$/integerSignDetect.py" />
         <option value="$PROJECT_DIR$/sample/is1.txt" />
         <option value="$PROJECT_DIR$/printfTest.py" />
-        <option value="$PROJECT_DIR$/sample/p1.txt" />
         <option value="$PROJECT_DIR$/1.py" />
+        <option value="$PROJECT_DIR$/cfg_compare.py" />
+        <option value="$PROJECT_DIR$/sample/1.txt" />
+        <option value="$PROJECT_DIR$/sample/z1.txt" />
+        <option value="$PROJECT_DIR$/sample/h4.txt" />
+        <option value="$PROJECT_DIR$/sample/p1.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1088" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -347,6 +298,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="cfg_compare" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sourceDetect" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cfg_compare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="integerOperate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sourceDetect" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -361,28 +334,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/integerOperate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="integerOverflowDetect" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sourceDetect" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/integerOverflowDetect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -438,10 +389,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.1" />
+        <item itemvalue="Python.cfg_compare" />
         <item itemvalue="Python.printfTest" />
         <item itemvalue="Python.integerSignDetect" />
         <item itemvalue="Python.integerOperate" />
-        <item itemvalue="Python.integerOverflowDetect" />
       </list>
     </recent_temporary>
   </component>
@@ -485,22 +436,23 @@
       <workItem from="1568200007813" duration="11951000" />
       <workItem from="1568213631173" duration="29000" />
       <workItem from="1568213682407" duration="15398000" />
+      <workItem from="1568246671262" duration="2533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185754000" />
+    <option name="totallyTimeSpent" value="188287000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8074792" visible="true" weight="0.16756032" />
-      <window_info id="Structure" order="1" sideWeight="0.19252078" side_tool="true" visible="true" weight="0.16756032" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80497926" visible="true" weight="0.16957104" />
+      <window_info id="Structure" order="1" sideWeight="0.19502075" side_tool="true" visible="true" weight="0.16957104" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32825485" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33240998" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33240998" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3933518" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -610,7 +562,7 @@
     <SUITE FILE_PATH="coverage/sourceDetect_2_$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1568215077904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect_2_$integerOverflowDetect.coverage" NAME="integerOverflowDetect Coverage Results" MODIFIED="1568226666535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$integerOverflowDetect.coverage" NAME="integerOverflowDetect Coverage Results" MODIFIED="1568206410119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sourceDetect_2_$cfg_compare.coverage" NAME="cfg_compare Coverage Results" MODIFIED="1568221828891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sourceDetect_2_$cfg_compare.coverage" NAME="cfg_compare Coverage Results" MODIFIED="1568247057601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$readAnalysis.coverage" NAME="readAnalysis Coverage Results" MODIFIED="1567010831319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$testCode.coverage" NAME="testCode Coverage Results" MODIFIED="1568205437176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$printfTest.coverage" NAME="printfTest Coverage Results" MODIFIED="1568200956146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -623,7 +575,7 @@
     <SUITE FILE_PATH="coverage/sourceDetect$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1568210245885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$1.coverage" NAME="1 Coverage Results" MODIFIED="1568211826002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect_2_$heapDetect.coverage" NAME="heapDetect Coverage Results" MODIFIED="1568226413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sourceDetect_2_$1.coverage" NAME="1 Coverage Results" MODIFIED="1568228702395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sourceDetect_2_$1.coverage" NAME="1 Coverage Results" MODIFIED="1568248699042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$cfg.coverage" NAME="cfg Coverage Results" MODIFIED="1567770106218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect$copyRate.coverage" NAME="copyRate Coverage Results" MODIFIED="1566922991357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sourceDetect_2_$printfTest.coverage" NAME="printfTest Coverage Results" MODIFIED="1568228032106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -692,14 +644,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/midFile/functionLine10.txt" />
     <entry file="file://$PROJECT_DIR$/midFile/token10.txt" />
     <entry file="file://$PROJECT_DIR$/heap_of.log" />
     <entry file="file://E:/anna/Lib/_bootlocale.py">
@@ -800,23 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/9.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="291" column="23" lean-forward="true" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfg_compare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cfg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -841,13 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -862,23 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/z1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-424">
-          <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stackOverflowTools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample/8.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -886,13 +789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/6.txt" />
     <entry file="file://$PROJECT_DIR$/sample/7.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -924,30 +821,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integerOverflowDetect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="203" column="42" selection-start-line="203" selection-start-column="42" selection-end-line="203" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/integerOperate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/io.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/io.txt" />
     <entry file="file://$PROJECT_DIR$/sample/13.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -971,7 +845,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/integerSignDetect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="1083">
           <caret line="61" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -979,16 +853,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/is1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/printfTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-981">
+        <state relative-caret-position="1672">
           <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -996,17 +863,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/integerOperate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2090">
+          <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integerOverflowDetect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3857">
+          <caret line="203" column="42" selection-start-line="203" selection-start-column="42" selection-end-line="203" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/9.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3914">
+          <caret line="291" column="23" lean-forward="true" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/z1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stackOverflowTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="100" column="67" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/h4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/io1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sample/p1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/is1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg_compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="58" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        <state relative-caret-position="950">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>

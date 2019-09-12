@@ -1,1 +1,1 @@
-1.txt  copyRate:100.0%  seq simi 100.0%  *
+2.txt  copyRate:54.545%  seq simi 59.058%

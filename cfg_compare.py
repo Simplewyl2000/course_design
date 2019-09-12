@@ -49,15 +49,15 @@ def compareMatrix(file1, file2):
 
         distanceSum = distanceSum/matrix1.shape[0]
         distanceInAll = distanceInAll + distanceSum
-
-    if distanceInAll>35:
+    print(distanceInAll)
+    if distanceInAll>45:
         return 0
 
     else:
-        k = (distanceInAll/35) * (math.pi/2)
+        k = (distanceInAll/45) * (math.pi/2)
         simi = math.cos(k)*90
 
     return simi
 
 
-print(compareMatrix("1.txt", "9.txt"))
+print(compareMatrix("1.txt", "2.txt"))

@@ -9,7 +9,7 @@ int main()
    char d = "#"
    char a[8]="I am a ";
    char b[9]="kkajshd";
-   printf("ha%d, %s",c,d);
+   printf("ha%d, %c",c);
 
 
     LPSTREAM pStream = NULL;

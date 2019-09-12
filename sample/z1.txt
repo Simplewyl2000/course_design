@@ -53,7 +53,7 @@ void vr321(int num)
 {
 char a[8]="I am a ";
 char b[9]="kkajshd";
-strncpy(a,"lanzksndfkdfkj",10);
+strncpy(a,"lanzksndfkdfkj",6);
 int each[4],max,min;
 if(num!=6174&&num) /*若不等于74且不等于0则进行卡布列克运算*/
 {
@@ -68,7 +68,7 @@ void parse_soret(int num,int *each)
 int i,*j,*k,temp;
 char a[8]="I am a ";
 char b[9]="kkajshd";
-strcpy(a,b);
+strcpy(a,"lasdjflkjaslfj");
 for(i=0;i<=4;i++) /*将NUM分解为数字*/
 {
 j=each+3-i;

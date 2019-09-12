@@ -62,8 +62,8 @@ void calc(char *s)
     int i = 0;
     int j ;
     int k = 0;
-    short b = 20051;
-    short c = 20052;
+    short b = 2;
+    short c = 2;
     short d;
     int max = 0;
     int flag = 0;

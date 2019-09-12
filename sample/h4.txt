@@ -31,7 +31,7 @@ for(int i=0;i<40;i++){
 }
     LoadLibrary("user32");
 	hHeap=HeapCreate(HEAP_GENERATE_EXCEPTIONS, 0x10000, 0xfffff);
-	buf1 =(char*) HeapAlloc(hHeap, 0, 600);
+	buf1 =(char*) HeapAlloc(hHeap, 0, 1000);
 	strcpy(buf1,mybuf2);
 	buf2 =(char*) HeapAlloc(hHeap, 0, 200);
 	HeapFree(hHeap, 0, buf1);
