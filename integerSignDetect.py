@@ -1,4 +1,3 @@
-import readAnalysis
 import cfg
 import re
 import integerOverflowDetect

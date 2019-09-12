@@ -1,4 +1,3 @@
-import readAnalysis
 import cfg
 import re
 
@@ -14,7 +13,7 @@ def findStrcpy(fileinput, filename):
     programLine = ""
     warnings = []
     flag = 1
-    
+
 
     for i in functionList:
         if i.get_functionName() == "strcpy":
@@ -26,7 +25,7 @@ def findStrcpy(fileinput, filename):
 
             for i in range(lineStrcpy-1):
                 program.readline()
-        
+
             programLine = program.readline()
             start1, end1 = re.search(r"strcpy\([0-9a-zA-Z_]*,\"*[0-9a-zA-Z]*\"*\)", programLine).span()
             arguement = programLine[start1+7:end1-1]
@@ -88,7 +87,7 @@ def findStrncpy(fileinput,filename):
 
             for i in range(lineStrncpy - 1):
                 programLine = program.readline()
-        
+
             programLine = program.readline()
             start, end = re.search(r"strncpy\([0-9a-zA-Z_]*,\"*[0-9a-zA-Z_]*\"*,\d+\)", programLine).span()
             arguement = programLine[start+8:end-1]
@@ -169,6 +168,6 @@ def detectStackOverflow(filename):
 
 
 if __name__ == "__main__":
-    print(detectStackOverflow("z1.txt"))
+    print(detectStackOverflow("1.txt"))
 
 
